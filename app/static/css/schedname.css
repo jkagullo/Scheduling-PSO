@@ -14,7 +14,6 @@
     color: #5E5E9A;
     display: flex;
     flex-direction: column;
-    background-color: orange;
 }
 
 .logo{
@@ -69,7 +68,6 @@
 }
 
 .content{
-    background-color: red;
     width: 80vw;
     height: 80vh;
     margin: 0 auto;
@@ -81,8 +79,7 @@
 .question{
     margin-top: 5%;
     width:50%;
-    height: 50%;
-    background-color: blue;
+    height: 40%;
 }
 
 .body-text{
@@ -91,27 +88,22 @@
 }
 
 .card1{
-    background-color: violet;
     width: 100%;
-    height: 33.33%;
+    height: 30%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 .card2{
-    background-color: green;
     width: 100%;
-    height: 33.33%;
+    height: 25%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 .card3{
-    background-color: blue;
     width: 100%;
-    height: 33.33%;
+    height: 20%;
 }
 .head{
     font-size: 26px;
@@ -139,10 +131,28 @@
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    border: none;
+    border: 1px solid #5E5E9A;
 }
 
 .input-container input[type="text"]::placeholder {
     color: #999; /* Placeholder text color */
     /* Adjust the position of the placeholder text */
+}
+
+.input-container input[type="text"]:focus {
+    border-color: #5E5E9A; /* Change the border color when the input is focused */
+}
+
+.next{
+    height: 40px;
+    width: 100px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: none;
+    background-color: #5E5E9A;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
 }
