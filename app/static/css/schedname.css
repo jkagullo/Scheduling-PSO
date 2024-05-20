@@ -140,7 +140,7 @@
 }
 
 .input-container input[type="text"]:focus {
-    border-color: #5E5E9A; /* Change the border color when the input is focused */
+    border-color: #5E5E9A !important; /* Change the border color when the input is focused */
 }
 
 .next{
