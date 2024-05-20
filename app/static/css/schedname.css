@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Rubik", sans-serif;
+}
+
+.body{
+    background-color: #e1e1e1;
+}
+
+.header{
+    height: 20vh;
+    width: 100vw;
+    color: #5E5E9A;
+    display: flex;
+    flex-direction: column;
+    background-color: orange;
+}
+
+.logo{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo img{
+    height: 70px;
+    width: 70px;
+}
+
+.header-text{
+    color: #5E5E9A;
+    font-size: 26px;
+    margin-left: 10px;
+    font-weight: 700;
+    margin-top: 40px;
+}
+
+.progress{
+    width: 80vw;
+    height: 2vh;
+    margin: 0 auto;
+    border: 1px solid #5E5E9A;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.progress-bar{
+    width: 5vw;
+    height: 2vh;
+    background-color: #5E5E9A;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.indicator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+.content{
+    background-color: red;
+    width: 80vw;
+    height: 80vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.question{
+    margin-top: 5%;
+    width:50%;
+    height: 50%;
+    background-color: blue;
+}
+
+.body-text{
+    margin: 0;
+    padding: 0;
+}
+
+.card1{
+    background-color: violet;
+    width: 100%;
+    height: 33.33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card2{
+    background-color: green;
+    width: 100%;
+    height: 33.33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card3{
+    background-color: blue;
+    width: 100%;
+    height: 33.33%;
+}
+.head{
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.input-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-container img{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.input-container input[type="text"]{
+    text-indent: 30px;
+    padding: 2%;
+    width: 77%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: none;
+}
+
+.input-container input[type="text"]::placeholder {
+    color: #999; /* Placeholder text color */
+    /* Adjust the position of the placeholder text */
+}
