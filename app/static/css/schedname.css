@@ -10,11 +10,7 @@ body {
     height: 100vh;
 }
 
-#schedName {
-    display: block;
-}
-
-#roomSchedule {
+#schedName, #roomSchedule {
     display: none;
 }
 
@@ -95,6 +91,10 @@ body {
     height: 40%;
 }
 
+#programs .question{
+    width: 80%;
+}
+
 .body-text{
     margin: 0;
     padding: 0;
@@ -106,6 +106,7 @@ body {
     flex-direction: column;
     color: #2E2E2E;
     margin-bottom: 25px;
+    border: 1px solid black;
 }
 
 .card2 {
@@ -113,6 +114,7 @@ body {
     display: flex;
     flex-direction: column;
     margin-bottom: 35px;
+    border: 1px solid black;
 }
 
 .card3 {
@@ -132,6 +134,7 @@ body {
     height: auto;
     border-radius: 10px;
     box-shadow: 0 0 6px 4px rgba(94, 94, 154, 0.2);
+    flex-direction: column;
 }
 
 .input-container img {
@@ -225,4 +228,37 @@ body {
     .head {
         font-size: 24px;
     }   
+}
+
+
+/* Grid */
+
+.grid{
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 6fr 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.number input{
+    width: 60%;
+    height: 55px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 1px solid #5E5E9A;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 500;
+}
+
+.year{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 10px;
 }
