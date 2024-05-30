@@ -126,6 +126,7 @@
     .text{
         font-size: 15px;
         margin-top: 10px;
+        width: 80%;
     }
     .button{
         width: 150px;
