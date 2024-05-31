@@ -10,13 +10,18 @@ body {
     height: 100vh;
 }
 
-#roomSchedule {
+#schedName {
     display: block;
+}
+
+#roomSchedule, #programs, #professors {
+    display: none;
 }
 
 /* PROFESSOR DIV UNIQUE STYLES*/
 #professors .question {
     width: 60%;
+    height: auto;
 }
 
 #professors .card1 {
@@ -41,7 +46,10 @@ body {
 }
 
 #profInput .grid-1 {
-    padding-top: 23px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    padding-top: 20px;
     grid-column: 1 / 2;
 }
 
@@ -56,9 +64,17 @@ body {
     padding: 0;
 }
 
-.temp-container {
-    height: 100%;
-    width: 33.2%;
+#profInput .prof-name {
+    width: 100%;
+}
+
+#profInput .delete-prof-container-button {
+    border-radius: 10px;
+    padding: 12px 26px;
+    border: none;
+    height: 55px;
+    background-color: rgb(246, 62, 62);
+    color: white;
 }
 
 #profInput .subject-container button {
@@ -69,18 +85,15 @@ body {
     border: none;
 }
 
+.temp-container {
+    height: 100%;
+    width: 30%;
+    padding: 16px;
+}
+
 #profInput .delete-subject-button {
     outline: 1px solid rgb(246, 62, 62);
     color: rgb(246, 62, 62);
-}
-
-#profInput .delete-prof-container-button {
-    background-color: rgb(246, 62, 62);
-    color: white;
-}
-
-#profInput .subject-container button:hover {
-    filter: brightness(90%);
 }
 
 #profInput label {
@@ -106,11 +119,11 @@ body {
     margin-top: 10px;
 }
 
-.prof-details .prof-name {
+.prof-details .input-prof-name {
     position: relative;
 }
 
-.prof-details .prof-name img {
+.prof-details .input-prof-name img {
     position: absolute;
     left: 15px;
     top: 50%;
@@ -200,7 +213,7 @@ body {
     padding: 0;
 }
 
-.card1{
+.card1 {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -255,12 +268,12 @@ body {
 
 .add-subject img {
     top: 50%;
-    left: 60%;
+    left: 64%;
 }
 
 .add-prof img {
     top: 50%;
-    left: 64%;
+    left: 65%;
 }
 
 .input-container input[type="text"]{
@@ -337,8 +350,17 @@ body {
     border-style: solid;
 }
 
+#profInput .subject-container button:hover, #profInput .delete-prof-container-button:hover {
+    filter: brightness(90%);
+}
+
 /* MEDIA QUERY OF TABS */
 @media screen and (max-width: 1024px){
+    #professors .question {
+        width: 90vw;
+        margin-top: 2%;
+    }
+
     .question {
         margin-top: 2%;
         width: 60%;
@@ -346,6 +368,43 @@ body {
 }
 
 @media screen and (max-width: 768px){
+    #profInput .input-prof-name input {
+        width: 100%;
+    }
+    #profInput .delete-prof-container-button {
+        padding: 20px 5.7vw;
+        height: 100%;
+    }
+    #profInput .subject-container button {
+        border-radius: 10px;
+        width: auto;
+        padding: 1vh 4.9vw;
+        border: none;
+    }
+    #professors .question {
+        width: 70vw;
+    }
+    #profInput .prof-details, #profInput .prof-add {
+        display: block;
+    }
+    #profInput .prof-name {
+        margin-bottom: 15px;
+        height: 100%;
+    }
+    #profInput .input-prof-name {
+        height: 100%;
+    }
+    .add-subject {
+        padding-right: 2px;
+    }
+    .add-prof img {
+        top: 50%;
+        left: 64%;
+    }
+    .add-subject img {
+        top: 50%;
+        left: 60%;
+    }
     .logo {
         margin-bottom: 20px;
     }
@@ -358,7 +417,19 @@ body {
     }   
 }
 
+@media screen and (max-width: 600px){
+    #professors .question {
+        width: 80vw;
+    }
+}
+
 @media screen and (max-width: 480px){
+    #profInput input, #profInput select {
+        font-size: 14px;
+    }
+    #profInput .delete-prof-container-button {
+        padding: 17px 5.7vw;
+    }
     .logo img {
         height: 50px;
         width: 50px;
@@ -368,6 +439,14 @@ body {
     }
     .head {
         font-size: 24px;
+    }
+    .add-prof img {
+        top: 50%;
+        left: 68%;
+    }
+    .add-subject img {
+        top: 50%;
+        left: 62%;
     }   
 }
 
@@ -375,6 +454,9 @@ body {
     .input-container input[type="text"]{
         padding: 12px 12px 12px 16px;
         font-size: 14px;
+    }
+    #profInput .delete-prof-container-button {
+        padding: 13px 5.7vw;
     }
     .next, .back {
         padding: 10px 34px;

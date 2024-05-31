@@ -45,6 +45,8 @@ function handleButtonClick() {
     // Handle clicked event in Subject Container
     parentProfessorElement.addEventListener('click', function(event) {
         event.preventDefault();
+
+        console.log(event.target);
         if (event.target.matches('.add-button')) {
             var parentElement = event.target.parentNode.parentNode.parentNode;
             
@@ -100,9 +102,12 @@ function handleButtonClick() {
                 var newProfessorDetailsHTML = `
                 <div class="grid-1">
                     <div class="prof-name">
-                        <img src="${profIconUrl}">
-                        <input type="text" placeholder="Professor Name">
+                        <div class="input-prof-name">
+                            <img src="${profIconUrl}">
+                            <input type="text" placeholder="Professor Name">
+                        </div>
                     </div>
+                    <button class="delete-prof-container-button">delete</button>
                 </div>
                 <div class="grid-2">
                     <label>Preferred Subject</label>
@@ -114,7 +119,7 @@ function handleButtonClick() {
                                 <option value="decision-theory">Decision Theory</option>
                                 <option value="data-analytics">Data Analytics</option>
                         </select>
-                        <button class="delete-prof-container-button">delete</button>
+                        <div class="temp-container"></div>
                     </div>  
                     <div class="add-button-container add-subject">
                         <img src="${addIconUrl}"/>
@@ -151,7 +156,7 @@ function handleButtonClick() {
             parentElement.remove();
         }
         else if (event.target.matches('.delete-prof-container-button')) {
-            var parentElement = event.target.parentNode.parentNode.parentNode;
+            var parentElement = event.target.parentNode.parentNode;
             
             // Remove the element
             parentElement.remove();
