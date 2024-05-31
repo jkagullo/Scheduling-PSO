@@ -9,6 +9,10 @@
     <link href=" {{ url_for('static', filename='css/schedname.css') }}" rel="stylesheet">
     <title>swarmy | setup</title>
     <link rel="icon" href="{{ url_for('static', filename='assets/logo.png') }}" type="image/x-icon">
+    <script>
+        var addIconUrl = "{{ url_for('static', filename='assets/add-icon.svg') }}";
+        var profIconUrl = "{{ url_for('static', filename='assets/professor-icon.svg') }}";
+    </script>
 </head>
 <body>
     <header>
@@ -83,7 +87,63 @@
                     </div>
                     <div class="card3">
                         <button id="roomSchedBack" class="next-back-button back">Back</button>
-                        <button id="programNext" class="next-back-button next">Next</button>
+                        <button id="professorNext" class="next-back-button next">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="professors">
+            <div class="content">
+                <div class="question">
+                    <div class="card1">
+                        <p class="head">Who are the Professors?</p>
+                        <p class="body-text">Input the professors together with their preferred subject to teach.</p>
+                    </div>
+                    <div class="card2">
+                        <form>
+                            <div class="input-container">
+                                <div id="profInput">
+                                    <div id="addProfessorDetails1" class="prof-details">
+                                        <div class="grid-1">
+                                            <div class="prof-name">
+                                                <img src="{{ url_for('static', filename='assets/professor-icon.svg') }}">
+                                                <input type="text" placeholder="Professor Name">
+                                            </div>
+                                        </div>
+                                        <div class="grid-2">
+                                            <label>Preferred Subject</label>
+                                            <div class="subject-container">
+                                                <select name="subject" id="subject">
+                                                        <option value="" selected disabled>Select a subject</option>
+                                                        <option value="artifical-intelligence">Artificial Intelligence</option>
+                                                        <option value="automata">Automata</option>
+                                                        <option value="decision-theory">Decision Theory</option>
+                                                        <option value="data-analytics">Data Analytics</option>
+                                                </select>
+                                                <div class="temp-container"></div>
+                                            </div>  
+                                            <div class="add-button-container add-subject">
+                                                <img src="{{ url_for('static', filename='assets/add-icon.svg') }}"/>
+                                                <button type="button" class="add-button">add</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="add-prof-button prof-add">
+                                        <div class="grid-1">
+                                            <div class="add-button-container add-prof">
+                                                <img src="{{ url_for('static', filename='assets/add-icon.svg') }}"/>
+                                                <button type="button" id="addProfessorButton" class="add-button">add professor</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card3">
+                        <button id="programBack" class="next-back-button back">Back</button>
+                        <button class="next-back-button next">Next</button>
                     </div>
                 </div>
             </div>
