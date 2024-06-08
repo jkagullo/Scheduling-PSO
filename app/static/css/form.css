@@ -1,0 +1,494 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+
+body {
+    background-color: #e1e1e1;
+    height: 100vh;
+}
+
+#schedName {
+    display: block;
+}
+
+#roomSchedule, #programs, #professors, #modal {
+    display: none;
+}
+
+/* PROFESSOR DIV UNIQUE STYLES*/
+#professors .question {
+    width: 60%;
+    height: auto;
+}
+
+#professors .card1 {
+    text-align: center;
+}
+
+#professors .input-container {
+    box-shadow: none;
+}
+
+#profInput {
+    display: block;
+    width: 100%;
+}
+
+#profInput .prof-details, #profInput .prof-add {
+    display: grid;
+    grid-template-columns: 1.16fr 0.84fr; 
+    column-gap: 50px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#profInput .grid-1 {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    padding-top: 20px;
+    grid-column: 1 / 2;
+}
+
+#profInput .grid-2 {
+    grid-column: 2 / 3;
+}
+
+#profInput .subject-container {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    padding: 0;
+}
+
+#profInput .prof-name {
+    width: 100%;
+}
+
+#profInput .delete-prof-container-button {
+    border-radius: 10px;
+    padding: 12px 26px;
+    border: none;
+    height: 55px;
+    background-color: rgb(246, 62, 62);
+    color: white;
+}
+
+#profInput .subject-container button {
+    width: 30%;
+    border-radius: 10px;
+    height: auto;
+    padding: 16px;
+    border: none;
+}
+
+.temp-container {
+    height: 100%;
+    width: 30%;
+    padding: 16px;
+}
+
+#profInput .delete-subject-button {
+    outline: 1px solid rgb(246, 62, 62);
+    color: rgb(246, 62, 62);
+}
+
+#profInput label {
+    color: #5E5E9A;
+    font-weight: 600;
+}
+
+#profInput select {
+    width: 100%;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+    border: 1px solid #5E5E9A;
+    padding: 16px 16px 16px 18px;
+}
+
+#profInput select:focus {
+    outline: 1px solid #5E5E9A !important;
+}
+
+.add-subject-mg-top select {
+    margin-top: 10px;
+}
+
+.prof-details .input-prof-name {
+    position: relative;
+}
+
+.prof-details .input-prof-name img {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+
+
+/* OVERALL */
+.header {
+    width: 100vw;
+    padding: 20px;
+    color: #5E5E9A;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo{
+    padding: 20px 20px 0 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+}
+
+.logo img{
+    height: 60px;
+    width: 60px;
+}
+
+.header-text{
+    color: #5E5E9A;
+    font-size: 36px;
+    margin-left: 20px;
+    font-weight: 700;
+}
+
+.progress {
+    width: 100%;
+    height: 2vh;
+    margin: 0 auto;
+    border: 1px solid #5E5E9A;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 10px;
+}
+
+.progress-bar {
+    height: 2vh;
+    background-color: #5E5E9A;
+    border-radius: 10px;
+    transition: width 0.4s ease;
+}
+
+
+/* WIDTH OF PROGRESS PER TAB */
+#progressBar {
+    width: 20%;
+}
+
+.indicator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+.content{
+    width: 100%;
+    height: 60vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.question {
+    margin-top: 5%;
+    width: 600px;
+    height: 40%;
+}
+
+.body-text{
+    margin: 0;
+    padding: 0;
+}
+
+.card1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #2E2E2E;
+    margin-bottom: 25px;
+}
+
+.card2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;
+}
+
+.card3 {
+    width: 100%;
+}
+
+.head{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.mg-top {
+    margin-top: 10px;
+}
+
+/* INPUT ELEMENT */
+.input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 6px 4px rgba(94, 94, 154, 0.2);
+}
+
+.input-container img {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.add-button-container img {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.add-subject img {
+    top: 50%;
+    left: 64%;
+}
+
+.add-prof img {
+    top: 50%;
+    left: 65%;
+}
+
+.input-container input[type="text"]{
+    text-indent: 30px;
+    padding: 16px 16px 16px 18px;
+    font-size: 18px;
+    font-weight: 500;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #5E5E9A;
+}
+
+.input-container input[type="text"]::placeholder {
+    color: #999; /* Placeholder text color */
+    /* Adjust the position of the placeholder text */
+}
+
+.input-container input:focus {
+    outline: 1px solid #5E5E9A !important; /* Change the border color when the input is focused */
+}
+
+
+/* BUTTONS */
+.back {
+    background-color: #E1E1E1;
+    box-shadow: inset 0 0 0 2px #5E5E9A;
+    padding: 11px 35px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    color: #5E5E9A;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.back:hover {
+    filter: brightness(95%);
+}
+
+.next {
+    padding: 11px 35px;
+    border-radius: 10px;
+    border: none;
+    background-color: #5E5E9A;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+
+.next:hover {
+    filter: brightness(90%);
+}
+
+.add-button-container {
+    position: relative;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.grid-2 .add-button-container {
+    width: 75%;
+}
+
+.add-button-container button {
+    padding: 11px 35px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px dotted #5E5E9A;
+    background-color: #E1E1E1;
+    cursor: pointer;
+}
+
+.add-button-container button:hover {
+    border-style: solid;
+}
+
+#profInput .subject-container button:hover, #profInput .delete-prof-container-button:hover {
+    filter: brightness(90%);
+}
+
+
+/* LOADING MODAL */
+#modal {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+
+.loading-modal {
+    text-align: center;
+}
+
+.loading-modal p {
+    font-size: 30px;
+    font-weight: 700;
+    color: #5E5E9A;
+    margin-bottom: 10%;
+}
+
+#pre-loader {
+    width: 100%;
+    z-index: 100;
+}
+
+
+
+/* MEDIA QUERY OF TABS */
+@media screen and (max-width: 1024px){
+    #professors .question {
+        width: 90vw;
+        margin-top: 2%;
+    }
+
+    .question {
+        margin-top: 2%;
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    #profInput .input-prof-name input {
+        width: 100%;
+    }
+    #profInput .delete-prof-container-button {
+        padding: 20px 5.7vw;
+        height: 100%;
+    }
+    #profInput .subject-container button {
+        border-radius: 10px;
+        width: auto;
+        padding: 1vh 4.9vw;
+        border: none;
+    }
+    #professors .question {
+        width: 70vw;
+    }
+    #profInput .prof-details, #profInput .prof-add {
+        display: block;
+    }
+    #profInput .prof-name {
+        margin-bottom: 15px;
+        height: 100%;
+    }
+    #profInput .input-prof-name {
+        height: 100%;
+    }
+    .add-subject {
+        padding-right: 2px;
+    }
+    .add-prof img {
+        top: 50%;
+        left: 64%;
+    }
+    .add-subject img {
+        top: 50%;
+        left: 60%;
+    }
+    .logo {
+        margin-bottom: 20px;
+    }
+    .head {
+        font-size: 28px;
+        margin-bottom: 6px;
+    }
+    .question {
+        width: 70%;
+    }   
+}
+
+@media screen and (max-width: 600px){
+    #professors .question {
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 480px){
+    #profInput input, #profInput select {
+        font-size: 14px;
+    }
+    #profInput .delete-prof-container-button {
+        padding: 17px 5.7vw;
+    }
+    .logo img {
+        height: 50px;
+        width: 50px;
+    }
+    .header-text {
+        font-size: 30px;
+    }
+    .head {
+        font-size: 24px;
+    }
+    .add-prof img {
+        top: 50%;
+        left: 68%;
+    }
+    .add-subject img {
+        top: 50%;
+        left: 62%;
+    }   
+}
+
+@media screen and (max-width: 380px) {
+    .input-container input[type="text"]{
+        padding: 12px 12px 12px 16px;
+        font-size: 14px;
+    }
+    #profInput .delete-prof-container-button {
+        padding: 13px 5.7vw;
+    }
+    .next, .back {
+        padding: 10px 34px;
+        font-size: 14px;
+    }
+}
