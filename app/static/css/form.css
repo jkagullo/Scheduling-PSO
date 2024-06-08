@@ -10,11 +10,11 @@ body {
     height: 100vh;
 }
 
-#schedName {
+#programs {
     display: block;
 }
 
-#roomSchedule, #programs, #professors, #modal {
+#roomSchedule, #schedName, #professors, #modal {
     display: none;
 }
 
@@ -180,7 +180,6 @@ body {
     transition: width 0.4s ease;
 }
 
-
 /* WIDTH OF PROGRESS PER TAB */
 #progressBar {
     width: 20%;
@@ -208,6 +207,42 @@ body {
     height: 40%;
 }
 
+#programs .question{
+    width: 50%;
+}
+
+#programs .grid {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 6fr 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#programs .number input {
+    margin-left: 20px;
+    width: 70%;
+    height: 55px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 1px solid #5E5E9A;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 500;
+}
+
+#programs .year {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+
 .body-text{
     margin: 0;
     padding: 0;
@@ -227,6 +262,7 @@ body {
     flex-direction: column;
     margin-bottom: 35px;
 }
+
 
 .card3 {
     width: 100%;
@@ -294,7 +330,6 @@ body {
 .input-container input:focus {
     outline: 1px solid #5E5E9A !important; /* Change the border color when the input is focused */
 }
-
 
 /* BUTTONS */
 .back {
@@ -390,6 +425,10 @@ body {
         margin-top: 2%;
     }
 
+    #programs .question {
+        width: 80%;
+    }
+
     .question {
         margin-top: 2%;
         width: 60%;
@@ -444,6 +483,37 @@ body {
     .question {
         width: 70%;
     }   
+    #programs .grid{
+        display: flex;
+        flex-direction: column;
+    }
+    #programs .number input{
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    #programs .input-container{
+        margin-bottom: 10px;
+    }
+    #programs .question{
+        width: 80%;
+    }
+    #programs .number{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    #programs input::placeholder{
+        font-size: 14px;
+    }
+    #programs .card2{
+        margin-bottom: 0;
+    }
+    #programs .card3{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 30px;
+    }
 }
 
 @media screen and (max-width: 600px){
@@ -479,6 +549,39 @@ body {
     }   
 }
 
+@media (max-width: 425px){
+    #programs .grid{
+        display: flex;
+        flex-direction: column;
+    }
+    #programs .number input{
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    #programs .input-container{
+        margin-bottom: 10px;
+    }
+    #programs .question{
+        width: 80%;
+    }
+    #programs .number{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    #programs input::placeholder{
+        font-size: 14px;
+    }
+    #programs .card2{
+        margin-bottom: 0;
+    }
+    #programs .card3{
+        display: flex;
+        justify-content: center;
+    }
+}
+
 @media screen and (max-width: 380px) {
     .input-container input[type="text"]{
         padding: 12px 12px 12px 16px;
@@ -490,5 +593,69 @@ body {
     .next, .back {
         padding: 10px 34px;
         font-size: 14px;
+    }
+    #programs .grid{
+        display: flex;
+        flex-direction: column;
+    }
+    #programs .number input{
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    #programs .input-container{
+        margin-bottom: 10px;
+    }
+    #programs .question{
+        width: 80%;
+    }
+    #programs .number{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    #programs input::placeholder{
+        font-size: 14px;
+    }
+    #programs .card2{
+        margin-bottom: 0;
+    }
+
+    #programs .card3{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width:320px){
+    #programs .grid{
+        display: flex;
+        flex-direction: column;
+    }
+    #programs .number input{
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    #programs .input-container{
+        margin-bottom: 10px;
+    }
+    #programs .question{
+        width: 80%;
+    }
+    #programs .number{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    #programs input::placeholder{
+        font-size: 14px;
+    }
+    #programs .card2{
+        margin-bottom: 0;
+    }
+    #programs .card3{
+        display: flex;
+        justify-content: center;
     }
 }
