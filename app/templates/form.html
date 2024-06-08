@@ -81,17 +81,76 @@
                 <div class="content">
                     <div class="question">
                         <div class="card1">
-                            <p class="head">What are the programs?</p>
-                            <p class="body-text">Select the programs you want to include in the schedule.</p>
+                            <p class="head">How many sections?</p>
+                            <p class="body-text">Input the number of sections per course and year.</p>
                         </div>
                         <div class="card2">
-                            <form>
+                            <div class="grid wrapper">
                                 
-                            </form>
+                                <div class="input-container">
+                                    <img src="{{url_for('static', filename='assets/calendar-icon.svg')}}">
+                                    <input type="text" placeholder="BS Computer Science" readonly>
+                                </div>
+    
+                                <div class="number">
+                                    <input type="number" min="0" max="10" placeholder="1st">
+                                </div>
+    
+                                <div class="number">
+                                    <input type="number" min="0" max="10" placeholder="2nd">
+                                </div>
+    
+                                <div class="number">
+                                    <input type="number" min="0" max="10" placeholder="3rd">
+                                </div>
+    
+                                <div class="number">
+                                    <input type="number" min="0" max="10" placeholder="4th">
+                                </div>
+    
+                            </div>
+    
+                            <div class="grid wrapper">
+                                <div class="input-container">
+                                    <img src="{{url_for('static', filename='assets/calendar-icon.svg')}}">
+                                    <input type="text" placeholder="BS Information Technology" readonly>
+                                </div>
+                                <div class="number">
+                                    <input type="number" min="0" max="10" placeholder="1st">
+                                </div>
+                                <div class="number">
+                                    <input type="number" min="0" max="10" placeholder="2nd">
+                                </div>
+                                <div class="number">
+                                    <input type="number" min="0" max="10" placeholder="3rd">
+                                </div>
+                                <div class="number">
+                                    <input type="number" min="0" max="10" placeholder="4th">
+                                </div>
+                            </div>
+    
+                            <div class="grid wrapper">
+                                <div class="input-container">
+                                    <img src="{{url_for('static', filename='assets/calendar-icon.svg')}}">
+                                    <input type="text" placeholder="BS Information System" readonly>
+                                </div>
+                                <div class="number">
+                                    <input type="number" min="0" max="10" placeholder="1st">
+                                </div>
+                                <div class="number">
+                                    <input type="number" min="0" max="10" placeholder="2nd">
+                                </div>
+                                <div class="number">
+                                    <input type="number" min="0" max="10" placeholder="3rd">
+                                </div>
+                                <div class="number">
+                                    <input type="number" min="0" max="10" placeholder="4th">
+                                </div>
+                            </div>
                         </div>
                         <div class="card3">
                             <button id="roomSchedBack" class="next-back-button back">Back</button>
-                            <button id="professorNext" class="next-back-button next">Next</button>
+                            <button id="programNext" class="next-back-button next">Next</button>
                         </div>
                     </div>
                 </div>
