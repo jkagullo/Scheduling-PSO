@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href=" {{ url_for('static', filename='css/form.css') }}" rel="stylesheet">
+    <title>swarmy | setup</title>
+    <link rel="icon" href="{{ url_for('static', filename='assets/logo.png') }}" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var addIconUrl = "{{ url_for('static', filename='assets/add-icon.svg') }}";
+        var profIconUrl = "{{ url_for('static', filename='assets/professor-icon.svg') }}";
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="logo">
+                <img src="{{url_for('static', filename='assets/logo.png')}}">
+                <p class="header-text">Swarmy</p>
+            </div>
+            <p class="indicator">GET STARTED</p>
+            <div class="progress">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <form id="schedNameForm">
+            <div id="schedName">
+                <div class="content">
+                    <div class="question">
+                        <div class="card1">
+                            <p class="head">What is the schedule name?</p>
+                            <p class="body-text">Enter your desired schedule name, you can always change it later.</p>
+                        </div>
+                        <div class="card2">
+                            <div class="input-container">
+                                <img src="{{url_for('static', filename='assets/calendar-icon.svg')}}">
+                                <input id="schedNameInput" type="text" placeholder="Enter schedule name" required>
+                            </div>
+                        </div>
+                        <div class="card3">
+                            <button id="roomSchedNext" type="Submit" class="next-back-button next">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </form>
+
+        <form id="roomScheduleForm">
+            <div id="roomSchedule">
+                <div class="content">
+                    <div class="question">
+                        <div class="card1">
+                            <p class="head">How many rooms to schedule?</p>
+                            <p class="body-text">Enter how many rooms are available to be scheduled.</p>
+                        </div>
+                        <div class="card2">
+                            <form>
+                                <div class="input-container">
+                                    <img src="{{url_for('static', filename='assets/calendar-icon.svg')}}">
+                                    <input type="text" placeholder="Number of rooms" pattern="\d*" title="Please enter numbers only" required>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card3">
+                            <button id="schedNameBack" type="Button" class="next-back-button back">Back</button>
+                            <button id="programNext" type="Submit" class="next-back-button next">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <form id="sectionForm">
+            <div id="programs">
+                <div class="content">
+                    <div class="question">
+                        <div class="card1">
+                            <p class="head">What are the programs?</p>
+                            <p class="body-text">Select the programs you want to include in the schedule.</p>
+                        </div>
+                        <div class="card2">
+                            <form>
+                                
+                            </form>
+                        </div>
+                        <div class="card3">
+                            <button id="roomSchedBack" class="next-back-button back">Back</button>
+                            <button id="professorNext" class="next-back-button next">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <form id="professorForm">
+            <div id="professors">
+                <div class="content">
+                    <div class="question">
+                        <div class="card1">
+                            <p class="head">Who are the Professors?</p>
+                            <p class="body-text">Input the professors together with their preferred subject to teach.</p>
+                        </div>
+                        <div class="card2">
+                            <form>
+                                <div class="input-container">
+                                    <div id="profInput">
+                                        <div id="addProfessorDetails1" class="prof-details">
+                                            <div class="grid-1">
+                                                <div class="prof-name">
+                                                    <div class="input-prof-name">
+                                                        <img src="{{ url_for('static', filename='assets/professor-icon.svg') }}">
+                                                        <input type="text" placeholder="Professor Name">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="grid-2">
+                                                <label>Preferred Subject</label>
+                                                <div class="subject-container">
+                                                    <select name="subject" id="subject">
+                                                            <option value="" selected disabled>Select a subject</option>
+                                                            <option value="artifical-intelligence">Artificial Intelligence</option>
+                                                            <option value="automata">Automata</option>
+                                                            <option value="decision-theory">Decision Theory</option>
+                                                            <option value="data-analytics">Data Analytics</option>
+                                                    </select>
+                                                    <div class="temp-container"></div>
+                                                </div>  
+                                                <div class="add-button-container add-subject">
+                                                    <img src="{{ url_for('static', filename='assets/add-icon.svg') }}"/>
+                                                    <button type="button" class="add-button">add</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="add-prof-button prof-add">
+                                            <div class="grid-1">
+                                                <div class="add-button-container add-prof">
+                                                    <img src="{{ url_for('static', filename='assets/add-icon.svg') }}"/>
+                                                    <button type="button" id="addProfessorButton" class="add-button">add professor</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card3">
+                            <button id="programBack" class="next-back-button back">Back</button>
+                            <button id="submitInfo" class="next-back-button next">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div id="modal">
+            <div class="loading-modal">
+                <div id="pre-loader"></div>
+                <video playsinline autoplay muted loop>
+                    <source src="{{ url_for('static', filename='assets/loading.mp4') }}" type="video/mp4">
+                </video>
+                <p>We are processing your schedule!</p>
+            </div>
+        </div>
+    </main>
+    <script src="{{ url_for('static', filename='js/scripts.js') }} "></script>
+</body>
+</html>

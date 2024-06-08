@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width" initial-scale="1.0" name="viewport">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <link href=" {{ url_for('static', filename='css/schedule.css') }}" rel="stylesheet">
+        <title>Swarmy</title>
+    </head>
+    <body>
+        <header>
+            <div class="logo blue-text fw-700">
+                <img src="{{url_for('static', filename='assets/logo.png')}}">
+                <p class="logo-text">Swarmy</p>
+            </div>
+            <div class="header blue-text fw-700">
+                <p>GENERATED SCHEDULES</p>
+            </div>
+        </header>
+        <main>
+            <div class="schedule-container">
+                <p class="table-header blue-text fw-700">BSCS 1-A</p>
+                <table>
+                    <thead class='blue-bg'>
+                        <tr>
+                            <th>Subject</th>
+                            <th>Professor</th>
+                            <th>Time</th>
+                            <th>Room</th>
+                        <tr>
+                    </thead>
+                    <tbody class='blue-text'>
+                        <tr>
+                            <td>CC103-M</td>
+                            <td>Eilbert Lee</td>
+                            <td>7:00AM - 10:00AM</td>
+                            <td>DOST-B</td>
+                        </tr>
+                        <tr>
+                            <td>CC103-M</td>
+                            <td>Eilbert Lee</td>
+                            <td>7:00AM - 10:00AM</td>
+                            <td>DOST-B</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </body>
+</html>

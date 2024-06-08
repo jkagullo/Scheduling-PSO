@@ -1,34 +1,33 @@
 document.addEventListener('DOMContentLoaded', function() {
-    changeTab();
     handleButtonClick();
 });
 
-function changeTab() {
-    var nextButton = document.querySelectorAll('.next-back-button');
 
-    nextButton.forEach(function(button) {
-        button.addEventListener('click', function() {
-            var buttonId = button.id;
-
-            removeAllDisplayTab();
-            if (buttonId === 'roomSchedNext' || buttonId === 'roomSchedBack') {
-                document.getElementById('roomSchedule').style.display = 'block';
-                document.getElementById('progressBar').style.width = '40%';
-            } 
-            else if (buttonId === 'schedNameBack' || buttonId === 'schedNameBack') {
-                document.getElementById('schedName').style.display = 'block';
-                document.getElementById('progressBar').style.width = '20%';
-            }
-            else if (buttonId === 'programNext' || buttonId === 'programBack') {
-                document.getElementById('programs').style.display = 'block';
-                document.getElementById('progressBar').style.width = '60%';
-            }
-            else if (buttonId === 'professorNext' || buttonId === 'professorBack') {
-                document.getElementById('professors').style.display = 'block';
-                document.getElementById('progressBar').style.width = '80%';
-            }
-        });
-    });
+function changeTab(buttonId) {
+    removeAllDisplayTab();
+    if (buttonId === 'schedNameNext' || buttonId === 'schedNameBack') {
+        document.getElementById('schedName').style.display = 'block';
+        document.getElementById('progressBar').style.width = '25%';
+    }
+    else if (buttonId === 'roomSchedNext' || buttonId === 'roomSchedBack') {
+        document.getElementById('roomSchedule').style.display = 'block';
+        document.getElementById('progressBar').style.width = '50%';
+    } 
+    else if (buttonId === 'programNext' || buttonId === 'programBack') {
+        document.getElementById('programs').style.display = 'block';
+        document.getElementById('progressBar').style.width = '75%';
+    }
+    else if (buttonId === 'professorNext') {
+        document.getElementById('professors').style.display = 'block';
+        document.getElementById('progressBar').style.width = '100%';
+    }
+    else if (buttonId === 'submitInfo') {
+        document.querySelector('header').style.display = 'none';
+        document.getElementById('modal').style.display = 'flex';
+        
+        // Temporary redirect to schedule page
+        setTimeout(() => { window.location.href = '/schedule' }, 5000);
+    }
 }
 
 function removeAllDisplayTab() {
@@ -189,3 +188,38 @@ function incrementId(parentElement) {
     }
     return;
 }
+
+
+
+document.getElementById('schedNameForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+});
+
+document.getElementById('roomScheduleForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+});
+
+var nextButton = document.querySelectorAll('.next-back-button');
+nextButton.forEach(function(button) {
+    button.addEventListener('click', function(e) {
+        
+        var buttonId = button.id;
+
+        if (buttonId.includes('Back')) {
+            e.preventDefault();
+            changeTab(buttonId);
+        }
+        else if (buttonId.includes('Next')) {
+            var form = document.getElementById(buttonId).closest('form');
+            if (form.checkValidity()) {
+                // Trigger form submission programmatically
+                form.dispatchEvent(new Event('submit'));
+
+                changeTab(buttonId);
+            } else {
+                console.log('Form is not valid');
+            }
+        }
+    });
+});
+

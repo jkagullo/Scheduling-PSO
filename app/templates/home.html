@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta content="width=device-width" initial-scale="1.0" name="viewport">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <link href=" {{ url_for('static', filename='css/home.css') }}" rel="stylesheet">
-    <link rel="icon" href="{{ url_for('static', filename='assets/logo.png') }}" type="image/x-icon">
-    <title> Swarmy </title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta content="width=device-width" initial-scale="1.0" name="viewport">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <link href=" {{ url_for('static', filename='css/home.css') }}" rel="stylesheet">
+        <link rel="icon" href="{{ url_for('static', filename='assets/logo.png') }}" type="image/x-icon">
+        <title> Swarmy </title>
+    </head>
     <body>
         <div class="container">
             <div class="left">
@@ -19,7 +19,7 @@
                     <p class="text">Scheduling System for Computer Studies
                         in Technological University of the Philippines - Manila
                     </p>
-                    <a href="{{url_for('schedname.schedname_page')}}"><button class="button">Get Started<img class="arrow" src="{{url_for('static', filename='assets/right_arrow.png')}}" alt="logo"></button></a>
+                    <a href="{{url_for('form.form_page')}}"><button class="button">Get Started<img class="arrow" src="{{url_for('static', filename='assets/right_arrow.png')}}" alt="logo"></button></a>
                     </button>
                 </div>
             </div>
