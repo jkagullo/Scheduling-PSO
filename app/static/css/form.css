@@ -10,11 +10,11 @@ body {
     height: 100vh;
 }
 
-#programs {
+#schedName {
     display: block;
 }
 
-#roomSchedule, #schedName, #professors, #modal {
+#roomSchedule, #programs, #professors, #modal {
     display: none;
 }
 

@@ -199,6 +199,10 @@ document.getElementById('roomScheduleForm').addEventListener('submit', function(
     e.preventDefault();
 });
 
+document.getElementById('sectionForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+});
+
 var nextButton = document.querySelectorAll('.next-back-button');
 nextButton.forEach(function(button) {
     button.addEventListener('click', function(e) {
