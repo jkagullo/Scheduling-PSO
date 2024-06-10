@@ -57,45 +57,81 @@ from collections import defaultdict
 import json
 
 # DATA 1
+# sections_cs = {
+#     1: ['Section 1A-CS', 'Section 1B-CS'],
+#     2: ['Section 2A-CS', 'Section 2B-CS'],
+#     3: ['Section 3A-CS'],
+#     4: ['Section 4A-CS']
+# }
+
+# # DATA 2
+# sections_it = {
+#     1: ['Section 1A-IT', 'Section 1B-IT'],
+#     2: ['Section 2A-IT', 'Section 2B-IT'],
+#     3: ['Section 3A-IT'],
+#     4: ['Section 4A-IT']
+# }
+
+# # DATA 3
+# sections_is = {
+#     1: ['Section 1A-IS', 'Section 1B-IS'],
+#     2: ['Section 2A-IS', 'Section 2B-IS'],
+#     3: ['Section 3A-IS'],
+#     4: ['Section 4A-IS']
+# }
+
 sections_cs = {
-    1: ['Section 1A-CS', 'Section 1B-CS'],
-    2: ['Section 2A-CS', 'Section 2B-CS'],
+    1: ['Section 1A-CS'],
+    2: ['Section 2A-CS'],
     3: ['Section 3A-CS'],
     4: ['Section 4A-CS']
 }
 
 # DATA 2
 sections_it = {
-    1: ['Section 1A-IT', 'Section 1B-IT'],
-    2: ['Section 2A-IT', 'Section 2B-IT'],
+    1: ['Section 1A-IT'],
+    2: ['Section 2A-IT'],
     3: ['Section 3A-IT'],
     4: ['Section 4A-IT']
 }
 
 # DATA 3
 sections_is = {
-    1: ['Section 1A-IS', 'Section 1B-IS'],
-    2: ['Section 2A-IS', 'Section 2B-IS'],
+    1: ['Section 1A-IS'],
+    2: ['Section 2A-IS'],
     3: ['Section 3A-IS'],
-    4: ['Section 4A-IS']
+    4: ['Section 4A-IS', 'Section 4B-IS']
 }
 
 
 
+
+
+
 # DATA 4
+# professors = {
+#     'Prof A': {'preferred_time': 'AM', 'preferred_subjects': ['CC113-M', 'CC131L-M']},
+#     'Prof B': {'preferred_time': '', 'preferred_subjects': ['', '']},
+#     'Prof C': {'preferred_time': '', 'preferred_subjects': ['', '']},
+#     'Prof D': {'preferred_time': '', 'preferred_subjects': ['', '']},
+#     'Prof E': {'preferred_time': '', 'preferred_subjects': ['CS233-M', 'CS333-M']},
+#     'Prof F': {'preferred_time': '', 'preferred_subjects': ['', '']},
+#     'Prof G': {'preferred_time': '', 'preferred_subjects': ['CS433-M', '']},
+#     'Prof H': {'preferred_time': '', 'preferred_subjects': ['CS413-M', 'CS272-M']},
+#     'Prof I': {'preferred_time': '', 'preferred_subjects': ['', '']},
+#     'Prof J': {'preferred_time': '', 'preferred_subjects': ['', '']},
+#     'Prof K': {'preferred_time': '', 'preferred_subjects': ['', '']},
+#     'Prof L': {'preferred_time': '', 'preferred_subjects': ['', '']},
+#     # Add more professors as needed
+# }
+
 professors = {
-    'Prof A': {'preferred_time': 'AM', 'preferred_subjects': ['CC113-M', 'CC131L-M']},
-    'Prof B': {'preferred_time': '', 'preferred_subjects': ['', '']},
+    'Prof A': {'preferred_time': '', 'preferred_subjects': ['', '']},
+    'Prof B': {'preferred_time': 'PM', 'preferred_subjects': ['CS303-M', 'CS322-M']},
     'Prof C': {'preferred_time': '', 'preferred_subjects': ['', '']},
-    'Prof D': {'preferred_time': '', 'preferred_subjects': ['', '']},
-    'Prof E': {'preferred_time': '', 'preferred_subjects': ['CS233-M', 'CS333-M']},
+    'Prof D': {'preferred_time': 'PM', 'preferred_subjects': ['', '']},
+    'Prof E': {'preferred_time': 'AM', 'preferred_subjects': ['IT202-M', 'CS243-M']},
     'Prof F': {'preferred_time': '', 'preferred_subjects': ['', '']},
-    'Prof G': {'preferred_time': '', 'preferred_subjects': ['CS433-M', '']},
-    'Prof H': {'preferred_time': '', 'preferred_subjects': ['CS413-M', 'CS272-M']},
-    'Prof I': {'preferred_time': '', 'preferred_subjects': ['', '']},
-    'Prof J': {'preferred_time': '', 'preferred_subjects': ['', '']},
-    'Prof K': {'preferred_time': '', 'preferred_subjects': ['', '']},
-    'Prof L': {'preferred_time': '', 'preferred_subjects': ['', '']},
     # Add more professors as needed
 }
 
@@ -202,8 +238,9 @@ subjects = {
 
 
 
-rooms = ['Room 320', 'Room 321', 'Room 322', 'Room 324', 'Room 326','Room 328', 'Room DOST-A', 'Room DOST-B', 'Room BODEGA-A', 'Room BODEGA-b']
+# rooms = ['Room 320', 'Room 321', 'Room 322', 'Room 324', 'Room 326','Room 328', 'Room DOST-A', 'Room DOST-B', 'Room BODEGA-A', 'Room BODEGA-b']
 
+rooms = ['Room 320', 'Room 321', 'Room 322', 'Room 324', 'Room 326','Room 328', 'Room DOST-A']
 
 time_slots = {
     'D1_H1': {'day': 'Monday', 'start': 7, 'end': 8},

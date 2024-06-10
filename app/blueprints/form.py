@@ -26,9 +26,9 @@ def receive_data():
     return 'Success!', 200
 
 def run_pso(sched_name, sections, rooms, professors):
-    print(json.dumps(professors, indent=4), end='\n\n')
-    print(rooms, end="\n\n")
-    print(json.dumps(sections, indent=4), end='\n\n')
+    # print(json.dumps(professors, indent=4), end='\n\n')
+    # print(rooms, end="\n\n")
+    # print(json.dumps(sections, indent=4), end='\n\n')
 
     # Pre defined objects
     subjects_CS_2 = {
@@ -131,7 +131,7 @@ def run_pso(sched_name, sections, rooms, professors):
 
     sections = {k: {int(k2): v2 for k2, v2 in v.items()} for k, v in sections.items()}      # Convert keys into integers
 
-    # print(json.dumps(sections, indent=4), end='\n\n')
+    # # print(json.dumps(sections, indent=4), end='\n\n')
 
     subjects = {k: {int(k2): v2 for k2, v2 in v.items()} for k, v in subjects.items()}      # Convert keys into integers
 
@@ -149,6 +149,8 @@ def run_pso(sched_name, sections, rooms, professors):
     w = 0.5
     c1 = 1.5
     c2 = 1.5
+    position_to_num = {}
+    num_to_position = {}
     max_classes_per_day = 6  # Set this to the maximum number of classes you want per day
     max_teaching_hours = 30  # Maximum teaching hours allowed per professor
 
@@ -365,12 +367,8 @@ def run_pso(sched_name, sections, rooms, professors):
         distribution_score = calculate_distribution(schedule)
         return preference_scores - conflict_penalty + distribution_score
 
-    position_to_num = {}
-    num_to_position = {}
-
-
     def convert_to_numeric(position):
-        global position_to_num, num_to_position
+        nonlocal position_to_num, num_to_position
         if position not in position_to_num:
             num = len(position_to_num)
             position_to_num[position] = num
@@ -378,7 +376,7 @@ def run_pso(sched_name, sections, rooms, professors):
         return position_to_num[position]
 
     def convert_from_numeric(num):
-        global num_to_position
+        nonlocal num_to_position
         return num_to_position[num]
 
 
@@ -570,9 +568,6 @@ def run_pso(sched_name, sections, rooms, professors):
     def adjust_event(event):
         section, subject, professor, time_slot, room = event
         year = get_subject_year(subject)
-        # subject_units = subjects_CS_2[year][subject]['units']
-        # subject_type = subjects_CS_2[year][subject]['type']
-        # expected_duration = subject_units * 3 if subject_type == 'lab' else subject_units
 
         if "CS" in section:
             program = "CS"
@@ -610,34 +605,6 @@ def run_pso(sched_name, sections, rooms, professors):
         event[4] = random.choice(rooms)  # Choose a new random room
 
         return tuple(event)
-
-    '''def adjust_event(event):
-        section, subject, professor, time_slot, room = event
-        year = get_subject_year(subject)
-        subject_units = subjects[year][subject]['units']
-        subject_type = subjects[year][subject]['type']
-        expected_duration = subject_units * 3 if subject_type == 'lab' else subject_units
-
-        # Adjust the event by changing its time slot or room
-        event = list(event)  # Convert tuple to list for modification
-
-        # Choose a new random time slot that can accommodate the expected duration
-        available_time_slots = [ts for ts in time_slots if time_slots[ts]['end'] - time_slots[ts]['start'] >= expected_duration]
-        if available_time_slots:
-            event[3] = random.choice(available_time_slots)
-
-        event[4] = random.choice(rooms)  # Choose a new random room
-
-        return tuple(event)
-    '''
-    # Example usage:
-
-
-
-    '''def validate_position(position):
-        # Validate the position (e.g., no double-booking)
-        return position'''
-
 
 
     def print_timetable(schedule):
@@ -746,84 +713,6 @@ def run_pso(sched_name, sections, rooms, professors):
         swarmy(swarm)
         #swarm(swarm_it)
 
-
-        #print("Swarm size:", swarm_size)
-        #each particle in swarm is an instance or memory address of where the particle is located
-        # Initialize gBest to the position of the first particle in the swarm
-
-        #COMPUTER SCIENCE----------------------------------------------------
-        # gBest = None
-        # gBest_fitness = float('-inf')
-        # #print("initial gBest: ", gBest)
-        # n = 0
-        # #print("Swarm Initialized:", swarm)
-        # # Evaluate initial fitness
-        # for particle in swarm_cs:
-        #     particle.fitness = calculate_fitness(particle.position)
-        #     particle.pBest = particle.position
-        #     particle.pBest_fitness = particle.fitness
-        #     if particle.fitness > gBest_fitness:
-        #         gBest = particle.position
-        #         gBest_fitness = particle.fitness
-        #         #print("particle.fitness > gBest_fitness: ", gBest)
-        #     # Iterate
-        # for iteration in range(max_iterations):
-        #     for particle in swarm_cs:
-        #         #print(particle, gBest, w, c1, c2)
-        #         #print("Particle Position:", particle.position)
-        #         #print("Particle Velocity:", particle.velocity)
-        #         particle.velocity = update_velocity(particle, gBest, w, c1, c2)
-        #         #print("PARTICLE.position TYPE: ", type(particle.position))
-        #         #print("before update: ", particle.position)
-        #         #particle_instance = Particle(list(particle.), [0] * len(particle))  # Create a Particle instance
-        #         particle.position, _ = adjust_schedule(particle.position)
-        #         particle.position = update_position(particle)
-        #         #print("after update: ", particle.position)
-        #         particle.position = validate_position(particle.position)
-        #         #print("after validate: ", particle.position)
-        #
-        #         if particle.position:
-        #             particle.fitness = calculate_fitness(particle.position)
-        #             if particle.fitness > particle.pBest_fitness:
-        #                 particle.pBest = particle.position
-        #                 particle.pBest_fitness = particle.fitness
-        #             if particle.fitness > gBest_fitness:
-        #                 #print("particle position in >gBest:", particle.position)
-        #                 gBest = particle.position
-        #                 gBest_fitness = particle.fitness
-        #         else:
-        #             print("Skipping fitness calculation due to invalid position.")
-        #
-        # #print("Final gBest:", gBest)
-        # #swarm2 = initialize_swarm(swarm_size, sections_it, subjects_IT_2, professors, time_slots, rooms)
-        #
-        # # The gBest now holds the best found schedule
-        # # This print statement is for the division per section of the overall schedule
-        # grouped_schedule = group_schedule_by_section(gBest)
-        #
-        #
-        # print("Optimized CS Schedule:")
-        # for section, entries in grouped_schedule.items():
-        #     print(f"\n{section}:")
-        #     for entry in entries:
-        #         n += 1
-        #         print(f"{n}. {entry}")
-        # print("\nFitness Score:", gBest_fitness)
-
-        #Di pa nalalagay -----------------------------------------------------------
-        #print_timetable(gBest)
-        # exporting to json
-        # Convert the schedule to a format suitable for JSON
-        # json_schedule = {section: [list(entry) for entry in entries] for section, entries in grouped_schedule.items()}
-        #
-        # # Save the schedule to a JSON file
-        # with open('schedule.json', 'w') as f:
-        #     json.dump(json_schedule, f, indent=4)
-        #-------------------------------------------------------------------------
-
-
-        # The gBest now holds the best found schedule
-        # This print statement is for you to see the overall schedule
         '''print("Optimized Schedule:\n" + '\n'.join(f"{n+i+1}. {entry}" for i, entry in enumerate(gBest)))
         print("Fitness Score:", gBest_fitness)'''
 
