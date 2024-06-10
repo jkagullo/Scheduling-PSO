@@ -679,7 +679,7 @@ def run_pso(sched_name, sections, rooms, professors):
         # Save the schedule to a JSON file
         with open('temp.txt', 'a') as f:
             f.write("1 ")
-            
+
         with open('schedule.json', 'w') as f:
             json.dump(json_schedule, f, indent=4)
 

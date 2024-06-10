@@ -364,9 +364,10 @@ def schedule_page():
 
     try:
         # Check if the created schedules file exists
-        if os.path.exists('schedule.json'):
+        if os.path.exists('app/static/schedule.json'):
+            
             # Load the json schedules
-            with open('schedule.json', 'r') as f:
+            with open('app/static/schedule.json', 'r') as f:
                 data = json.load(f)
 
             # Parse the section key text

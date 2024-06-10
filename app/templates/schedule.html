@@ -66,10 +66,23 @@
             {% endif %}
         </main>
         <script>
-            if (!window.location.hash) {
-                window.location = window.location + '#loaded';
-                setTimeout(() => { window.location.reload() }, 2000); // Adjust the delay time as needed (in milliseconds)
+            let data = null;
+
+            async function fetchData() {
+                const response = await fetch('/static/schedule.json');
+                const jsonData = await response.json();
+                return JSON.stringify(jsonData);
             }
+
+            setInterval(async () => {
+                const newData = await fetchData();
+
+                if (data !== null && data !== newData) {
+                    console.log('JSON changed');
+                    location.reload();
+                }
+                data = newData;
+            }, 2000); 
         </script>
     </body>
 </html>
