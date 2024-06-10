@@ -18,13 +18,18 @@ def receive_data():
     sections = data['sections']
     rooms = data['roomSchedule']
     professors = data['professors']
-
+    # Change positions
+    professors = {name: {'preferred_time': info['preferred_time'], 'preferred_subjects': info['preferred_subjects']} for name, info in professors.items()}
     # PSO Algorithm for scheduling
     run_pso(sched_name, sections, rooms, professors)
 
     return 'Success!', 200
 
 def run_pso(sched_name, sections, rooms, professors):
+    print(json.dumps(professors, indent=4), end='\n\n')
+    print(rooms, end="\n\n")
+    print(json.dumps(sections, indent=4), end='\n\n')
+
     # Pre defined objects
     subjects_CS_2 = {
         1: {'CC141L-M': {'type': 'lab', 'units': 1}, 'CC142-M': {'type': 'lec', 'units': 2}, 'CC103-M': {'type': 'lec', 'units': 3}, 'CS123-M': {'type': 'lec', 'units': 3}, 'GEC2-M': {'type': 'lec', 'units': 3}, 'GEC3-M': {'type': 'lec', 'units': 3}, 'GEC5-M': {'type': 'lec', 'units': 3}, 'MATHA35-M': {'type': 'lec', 'units': 5}, 'NSTP2-M': {'type': 'lec', 'units': 3}, 'PE2-M': {'type': 'lec', 'units': 2}},
@@ -822,5 +827,5 @@ def run_pso(sched_name, sections, rooms, professors):
         '''print("Optimized Schedule:\n" + '\n'.join(f"{n+i+1}. {entry}" for i, entry in enumerate(gBest)))
         print("Fitness Score:", gBest_fitness)'''
 
-    if __name__ == "__main__":
-        main()
+    # Run main pso function
+    main()

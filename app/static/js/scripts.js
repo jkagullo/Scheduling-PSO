@@ -106,6 +106,7 @@ function handleButtonClick() {
                     <div class="subject-container">
                         <select name="subject" id="subject" required>
                             <option value="" selected disabled>Select a subject</option>
+                            <option value="">Any Subject</option>
                             <optgroup label="Computer Science">
                                 <option value="CC103-M">Discrete Structures</option>
                                 <option value="CS123-M">Linear Algebra</option>
@@ -227,6 +228,7 @@ function handleButtonClick() {
                                 <option value="" selected disabled>Time</option>
                                 <option value="AM">AM</option>
                                 <option value="PM">PM</option>
+                                <option value="">Anytime</option>
                             </select>
                         </div>
                     </div>
@@ -237,6 +239,7 @@ function handleButtonClick() {
                     <div class="subject-container">
                         <select name="subject" id="subject" required>
                             <option value="" selected disabled>Select a subject</option>
+                            <option value="">Any Subject</option>
                             <optgroup label="Computer Science">
                                 <option value="CC103-M">Discrete Structures</option>
                                 <option value="CS123-M">Linear Algebra</option>

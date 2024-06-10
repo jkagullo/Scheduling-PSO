@@ -279,7 +279,6 @@ time_slots = {
     'D5_H11': {'day': 'Friday', 'start': 17, 'end': 18},  # 5:00 PM to 6:00 PM
     'D5_H12': {'day': 'Friday', 'start': 18, 'end': 19},
     'D5_H13': {'day': 'Friday', 'start': 19, 'end': 20}
-
 }
 
 
