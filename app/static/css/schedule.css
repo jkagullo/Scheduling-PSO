@@ -44,7 +44,7 @@ header {
 
 .schedule-container {
     width: 60%;
-    margin: 0 auto;
+    margin: 0 auto 50px auto;
 }
 
 .table-header {
@@ -56,6 +56,10 @@ header {
     border-spacing: 0;
     width: 100%;
     table-layout: fixed;
+}
+
+main {
+    padding-bottom: 50px;
 }
 
 thead, tbody {
@@ -79,6 +83,13 @@ tbody {
 td {
     padding: 7px 10px;
     font-weight: 500;
+}
+
+.no-schedule-text {
+    text-align: center;
+    padding: 50px;
+    font-size: 20px;
+    opacity: 0.7;
 }
 
 /* Usable class */

@@ -57,13 +57,13 @@ function changeTab(buttonId) {
         document.getElementById('professors').style.display = 'block';
         document.getElementById('progressBar').style.width = '100%';
     }
-    else if (buttonId === 'submitInfo') {
-        document.querySelector('header').style.display = 'none';
-        document.getElementById('modal').style.display = 'flex';
+    // else if (buttonId === 'submitInfo') {
+    //     document.querySelector('header').style.display = 'none';
+    //     document.getElementById('modal').style.display = 'flex';
         
-        // Temporary redirect to schedule page
-        setTimeout(() => { window.location.href = '/schedule' }, 5000);
-    }
+    //     // Temporary redirect to schedule page
+    //     setTimeout(() => { window.location.href = '/schedule' }, 5000);
+    // }
 }
 
 function removeAllDisplayTab() {
@@ -529,6 +529,11 @@ document.getElementById('professorForm').addEventListener('submit', function(e) 
             }
         });
 
+        // Display the pre-loading modal
+        document.querySelector('header').style.display = 'none';
+        document.getElementById('professors').style.display = 'none';
+        document.getElementById('modal').style.display = 'flex';
+
         $.ajax({
             url: '/receive_data',
             method: 'POST',
@@ -536,8 +541,13 @@ document.getElementById('professorForm').addEventListener('submit', function(e) 
             data: JSON.stringify({ sections, roomSchedule, professors, schedName }),
             success: function(response) {
                 console.log('Success:', response);
+                window.location.href = '/schedule';
             },
             error: function(error) {
+                document.querySelector('header').style.display = 'flex';
+                document.getElementById('modal').style.display = 'none';
+                document.getElementById('professors').style.display = 'block';
+                document.getElementById('progressBar').style.width = '100%';
                 console.error('Error:', error);
             }
         })

@@ -18,33 +18,52 @@
             </div>
         </header>
         <main>
-            <div class="schedule-container">
-                <p class="table-header blue-text fw-700">BSCS 1-A</p>
-                <table>
-                    <thead class='blue-bg'>
-                        <tr>
-                            <th>Subject</th>
-                            <th>Professor</th>
-                            <th>Time</th>
-                            <th>Room</th>
-                        <tr>
-                    </thead>
-                    <tbody class='blue-text'>
-                        <tr>
-                            <td>CC103-M</td>
-                            <td>Eilbert Lee</td>
-                            <td>7:00AM - 10:00AM</td>
-                            <td>DOST-B</td>
-                        </tr>
-                        <tr>
-                            <td>CC103-M</td>
-                            <td>Eilbert Lee</td>
-                            <td>7:00AM - 10:00AM</td>
-                            <td>DOST-B</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            {% if data %}
+                {% for key, value in data.items() %}
+                    <div class="schedule-container">
+                        <p class="table-header blue-text fw-700">{{ key }}</p>
+                        <table>
+                            <thead class='blue-bg'>
+                                <tr>
+                                    <th>Subject</th>
+                                    <th>Professor</th>
+                                    <th>Time</th>
+                                    <th>Room</th>
+                                <tr>
+                            </thead>
+                            <tbody class='blue-text'>
+                                {% for item in value %} 
+                                <tr>
+                                    <td>{{ item[1] }}</td>
+                                    <td>{{ item[2] }}</td>
+                                    <td>{{ item[3] }}</td>
+                                    <td>{{ item[4] }}</td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="schedule-container">
+                    <p class="table-header blue-text fw-700">{{ key }}</p>
+                    <table>
+                        <thead class='blue-bg'>
+                            <tr>
+                                <th>Subject</th>
+                                <th>Professor</th>
+                                <th>Time</th>
+                                <th>Room</th>
+                            <tr>
+                        </thead>
+                        <tbody class='blue-text'>
+                            <tr>
+                                <td class="no-schedule-text" colspan="4">Unable to retrieve schedules</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            {% endif %}
         </main>
     </body>
 </html>
