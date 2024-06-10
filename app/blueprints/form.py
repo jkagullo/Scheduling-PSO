@@ -24,7 +24,7 @@ def receive_data():
     # PSO Algorithm for scheduling
     run_pso(sched_name, sections, rooms, professors)
     
-    return 'Success!', 200
+    return 'Success!'
 
 
 

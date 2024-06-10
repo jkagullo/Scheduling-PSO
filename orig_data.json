@@ -1,0 +1,352 @@
+{
+    "1A-CS": [
+        [
+            "Section 1A-CS",
+            "GEC3-M",
+            "prof a",
+            "Tue 17:00 - 20:00",
+            "Room 004"
+        ],
+        [
+            "Section 1A-CS",
+            "PE2-M",
+            "prof a",
+            "Thu 15:00 - 17:00",
+            "Room 000"
+        ],
+        [
+            "Section 1A-CS",
+            "CC142-M",
+            "prof a",
+            "Mon 12:00 - 14:00",
+            "Room 001"
+        ],
+        [
+            "Section 1A-CS",
+            "NSTP2-M",
+            "prof a",
+            "Thu 12:00 - 15:00",
+            "Room 000"
+        ],
+        [
+            "Section 1A-CS",
+            "MATHA35-M",
+            "prof a",
+            "Tue 12:00 - 17:00",
+            "Room 002"
+        ],
+        [
+            "Section 1A-CS",
+            "GEC5-M",
+            "prof b",
+            "Fri 15:00 - 18:00",
+            "Room 003"
+        ],
+        [
+            "Section 1A-CS",
+            "CS123-M",
+            "prof b",
+            "Wed 14:00 - 17:00",
+            "Room 003"
+        ],
+        [
+            "Section 1A-CS",
+            "GEC2-M",
+            "prof b",
+            "Mon 17:00 - 20:00",
+            "Room 003"
+        ],
+        [
+            "Section 1A-CS",
+            "CC141L-M",
+            "prof b",
+            "Wed 17:00 - 20:00",
+            "Room 000"
+        ],
+        [
+            "Section 1A-CS",
+            "CC103-M",
+            "prof b",
+            "Mon 14:00 - 17:00",
+            "Room 005"
+        ]
+    ],
+    "2A-CS": [
+        [
+            "Section 2A-CS",
+            "CC202-M",
+            "prof a",
+            "Wed 16:00 - 18:00",
+            "Room 002"
+        ],
+        [
+            "Section 2A-CS",
+            "CS261L-M",
+            "prof a",
+            "Fri 17:00 - 20:00",
+            "Room 002"
+        ],
+        [
+            "Section 2A-CS",
+            "CS202--M",
+            "prof a",
+            "Fri 15:00 - 17:00",
+            "Room 001"
+        ],
+        [
+            "Section 2A-CS",
+            "CC201L-M",
+            "prof a",
+            "Mon 17:00 - 20:00",
+            "Room 005"
+        ],
+        [
+            "Section 2A-CS",
+            "CS201L-M",
+            "prof a",
+            "Mon 14:00 - 17:00",
+            "Room 001"
+        ],
+        [
+            "Section 2A-CS",
+            "CS222--M",
+            "prof a",
+            "Wed 13:00 - 15:00",
+            "Room 002"
+        ],
+        [
+            "Section 2A-CS",
+            "CS243-M",
+            "prof b",
+            "Tue 14:00 - 17:00",
+            "Room 003"
+        ],
+        [
+            "Section 2A-CS",
+            "PE3-M",
+            "prof b",
+            "Thu 14:00 - 17:00",
+            "Room 004"
+        ],
+        [
+            "Section 2A-CS",
+            "CS262-M",
+            "prof b",
+            "Fri 13:00 - 15:00",
+            "Room 000"
+        ],
+        [
+            "Section 2A-CS",
+            "CC223-M",
+            "prof b",
+            "Thu 17:00 - 20:00",
+            "Room 004"
+        ],
+        [
+            "Section 2A-CS",
+            "CS221L--M",
+            "prof b",
+            "Tue 17:00 - 20:00",
+            "Room 003"
+        ]
+    ],
+    "3A-CS": [
+        [
+            "Section 3A-CS",
+            "CSE3-M",
+            "prof b",
+            "Thu 7:00 - 10:00",
+            "Room 000"
+        ],
+        [
+            "Section 3A-CS",
+            "CS321L-M",
+            "prof b",
+            "Mon 8:00 - 11:00",
+            "Room 003"
+        ],
+        [
+            "Section 3A-CS",
+            "CS361L-M",
+            "prof b",
+            "Fri 9:00 - 12:00",
+            "Room 002"
+        ],
+        [
+            "Section 3A-CS",
+            "CS343-M",
+            "prof b",
+            "Tue 8:00 - 11:00",
+            "Room 005"
+        ],
+        [
+            "Section 3A-CS",
+            "CSE4-M",
+            "prof b",
+            "Wed 9:00 - 12:00",
+            "Room 002"
+        ],
+        [
+            "Section 3A-CS",
+            "CS362-M",
+            "prof b",
+            "Fri 18:00 - 20:00",
+            "Room 002"
+        ],
+        [
+            "Section 3A-CS",
+            "CS322-M",
+            "prof b",
+            "Wed 12:00 - 14:00",
+            "Room 004"
+        ]
+    ],
+    "1A-IT": [
+        [
+            "Section 1A-IT",
+            "CC103-M",
+            "prof a",
+            "Fri 12:00 - 15:00",
+            "Room 003"
+        ],
+        [
+            "Section 1A-IT",
+            "GEC2-M",
+            "prof a",
+            "Thu 17:00 - 20:00",
+            "Room 002"
+        ],
+        [
+            "Section 1A-IT",
+            "IT123-M",
+            "prof a",
+            "Wed 7:00 - 10:00",
+            "Room 005"
+        ],
+        [
+            "Section 1A-IT",
+            "CC141L-M",
+            "prof a",
+            "Tue 9:00 - 12:00",
+            "Room 000"
+        ],
+        [
+            "Section 1A-IT",
+            "GEC5-M",
+            "prof a",
+            "Mon 9:00 - 12:00",
+            "Room 004"
+        ],
+        [
+            "Section 1A-IT",
+            "PE2-M",
+            "prof b",
+            "Thu 12:00 - 14:00",
+            "Room 005"
+        ],
+        [
+            "Section 1A-IT",
+            "CC142-M",
+            "prof b",
+            "Mon 12:00 - 14:00",
+            "Room 005"
+        ]
+    ],
+    "2A-IT": [
+        [
+            "Section 2A-IT",
+            "CC223-M",
+            "prof a",
+            "Thu 9:00 - 12:00",
+            "Room 000"
+        ],
+        [
+            "Section 2A-IT",
+            "IT242-M",
+            "prof a",
+            "Wed 18:00 - 20:00",
+            "Room 005"
+        ],
+        [
+            "Section 2A-IT",
+            "CC201L-M",
+            "prof a",
+            "Fri 9:00 - 12:00",
+            "Room 001"
+        ],
+        [
+            "Section 2A-IT",
+            "IT202--M",
+            "prof a",
+            "Mon 7:00 - 9:00",
+            "Room 004"
+        ],
+        [
+            "Section 2A-IT",
+            "IT201L--M",
+            "prof a",
+            "Wed 12:00 - 13:00",
+            "Room 001"
+        ],
+        [
+            "Section 2A-IT",
+            "CC202-M",
+            "prof a",
+            "Wed 10:00 - 12:00",
+            "Room 002"
+        ],
+        [
+            "Section 2A-IT",
+            "IT261L-M",
+            "prof b",
+            "Tue 12:00 - 13:00",
+            "Room 003"
+        ],
+        [
+            "Section 2A-IT",
+            "PE4-M",
+            "prof b",
+            "Wed 7:00 - 9:00",
+            "Room 001"
+        ],
+        [
+            "Section 2A-IT",
+            "IT262-M",
+            "prof b",
+            "Fri 7:00 - 9:00",
+            "Room 003"
+        ]
+    ],
+    "1A-IS": [
+        [
+            "Section 1A-IS",
+            "CC142-M",
+            "prof a",
+            "Tue 7:00 - 9:00",
+            "Room 001"
+        ],
+        [
+            "Section 1A-IS",
+            "PE2-M",
+            "prof a",
+            "Fri 7:00 - 9:00",
+            "Room 001"
+        ]
+    ],
+    "2A-IS": [
+        [
+            "Section 2A-IS",
+            "PE4-M",
+            "prof a",
+            "Thu 7:00 - 9:00",
+            "Room 005"
+        ],
+        [
+            "Section 2A-IS",
+            "CC202-M",
+            "prof b",
+            "Thu 10:00 - 12:00",
+            "Room 004"
+        ]
+    ]
+}

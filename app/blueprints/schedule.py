@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, request
 import json
 import os
+from time import sleep
 
 schedule = Blueprint('schedule', __name__)
 
@@ -359,40 +360,51 @@ def schedule_page():
             "units": 3
         }
     }
+    data = None     
 
-    # Check if the created schedules file exists
-    if os.path.exists('schedule.json'):
-        # Load the json schedules
-        # with open('json/datus.json', 'r') as f:
-        #     data = json.load(f)
-        with open('schedule.json', 'r') as f:
-            data = json.load(f)
+    try:
+        # Check if the created schedules file exists
+        if os.path.exists('schedule.json'):
+            # Load the json schedules
+            with open('schedule.json', 'r') as f:
+                data = json.load(f)
 
-        # Parse the section key text
-        data = {key.replace("Section ", ""): value for key, value in data.items()}
+            # Parse the section key text
+            data = {key.replace("Section ", ""): value for key, value in data.items()}
 
-        # Sort in ascending by professor name
-        for section, info in data.items():
-            data[section] = sorted(info, key=lambda x: x[2])
-        
-        # Get the expected duration of time based on given format and its respected type and units
-        for section, info in data.items():
-            for i in range(len(info)):
-                sub_code = data[section][i][1]
-                
-                if sub_code in subjects:
-                    sched_time_format = data[section][i][3]
-                    sched_time_dict = time_slots[sched_time_format]
-                    if (subjects[sub_code]['type'] == 'lec'):
-                        # multiply units by 1 
-                        unit_multiplier = 1
-                    elif (subjects[sub_code]['type'] == 'lab'):
-                        # multiply units by 3 
-                        unit_multiplier = 1
-                    data[section][i][3] = f"{sched_time_dict['day'][:3] + ' ' + str(sched_time_dict['start']) + ':00 - ' + str(sched_time_dict['start'] + subjects[sub_code]['units'] * unit_multiplier) + ':00'}"
+            # Sort in ascending by professor name
+            for section, info in data.items():
+                data[section] = sorted(info, key=lambda x: x[2])
 
-    else:
-        print("Error: The file 'schedule.json' does not exist.")
+            # Get the expected duration of time based on given format and its respected type and units
+            for section, info in data.items():
+                for i in range(len(info)):
+                    sub_code = data[section][i][1]
+
+                    if sub_code in subjects:
+                        sched_time_format = data[section][i][3]
+                        sched_time_dict = time_slots[sched_time_format]
+                        if (subjects[sub_code]['type'] == 'lec'):
+                            # multiply units by 1 
+                            unit_multiplier = 1
+                        elif (subjects[sub_code]['type'] == 'lab'):
+                            # multiply units by 3 
+                            unit_multiplier = 3
+                        data[section][i][3] = f"{sched_time_dict['day'][:3] + ' ' + str(sched_time_dict['start']) + ':00 - ' + str(sched_time_dict['start'] + subjects[sub_code]['units'] * unit_multiplier) + ':00'}"
+
+            # Log the final data for verification
+            with open('orig_data.json', 'w') as f:
+                f.write(json.dumps(data, indent=4))
+
+            print("Data processed successfully:\n", json.dumps(data, indent=4))
+
+        else:
+            print("Error: The file 'schedule.json' does not exist.")
+            data = None
+
+    except Exception as e:
+        print("An error occurred:", str(e))
         data = None
+
 
     return render_template('schedule.html', data=data)

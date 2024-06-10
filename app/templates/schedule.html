@@ -65,5 +65,11 @@
                 </div>
             {% endif %}
         </main>
+        <script>
+            if (!window.location.hash) {
+                window.location = window.location + '#loaded';
+                setTimeout(() => { window.location.reload() }, 2000); // Adjust the delay time as needed (in milliseconds)
+            }
+        </script>
     </body>
 </html>

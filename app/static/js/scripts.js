@@ -104,9 +104,8 @@ function handleButtonClick() {
                 // Add new subject element
                 var newSubjectHTML = `
                     <div class="subject-container">
-                        <select name="subject" id="subject" required>
-                            <option value="" selected disabled>Select a subject</option>
-                            <option value="">Any Subject</option>
+                        <select name="subject" id="subject">
+                            <option value="" selected>Any Subject</option>
                             <optgroup label="Computer Science">
                                 <option value="CC103-M">Discrete Structures</option>
                                 <option value="CS123-M">Linear Algebra</option>
@@ -224,11 +223,10 @@ function handleButtonClick() {
                         <div class="input-prof-name">
                             <img src="${profIconUrl}">
                             <input type="text" placeholder="Professor Name" pattern="^[a-zA-Z\\s]*$" required>
-                            <select name="preferred-time" required>
-                                <option value="" selected disabled>Time</option>
+                            <select name="preferred-time">
+                                <option value="" selected>Anytime</option>
                                 <option value="AM">AM</option>
                                 <option value="PM">PM</option>
-                                <option value="">Anytime</option>
                             </select>
                         </div>
                     </div>
@@ -237,9 +235,8 @@ function handleButtonClick() {
                 <div class="grid-2">
                     <label>Preferred Subject</label>
                     <div class="subject-container">
-                        <select name="subject" id="subject" required>
-                            <option value="" selected disabled>Select a subject</option>
-                            <option value="">Any Subject</option>
+                        <select name="subject" id="subject">
+                            <option value="" selected>Any Subject</option>
                             <optgroup label="Computer Science">
                                 <option value="CC103-M">Discrete Structures</option>
                                 <option value="CS123-M">Linear Algebra</option>
@@ -540,7 +537,6 @@ document.getElementById('professorForm').addEventListener('submit', function(e) 
             contentType: 'application/json',
             data: JSON.stringify({ sections, roomSchedule, professors, schedName }),
             success: function(response) {
-                console.log('Success:', response);
                 window.location.href = '/schedule';
             },
             error: function(error) {

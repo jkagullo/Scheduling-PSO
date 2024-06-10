@@ -67,19 +67,19 @@
                                 </div>
     
                                 <div class="number">
-                                    <input type="number" min="1" max="10" placeholder="1st" required>
+                                    <input type="number" min="1" max="10" placeholder="1st" value="1" required>
                                 </div>
     
                                 <div class="number">
-                                    <input type="number" min="1" max="10" placeholder="2nd" required>
+                                    <input type="number" min="1" max="10" placeholder="2nd" value="1" required>
                                 </div>
     
                                 <div class="number">
-                                    <input type="number" min="1" max="10" placeholder="3rd" required>
+                                    <input type="number" min="1" max="10" placeholder="3rd" value="1" required>
                                 </div>
     
                                 <div class="number">
-                                    <input type="number" min="1" max="10" placeholder="4th" required>
+                                    <input type="number" min="1" max="10" placeholder="4th" value="1" required>
                                 </div>
     
                             </div>
@@ -90,16 +90,16 @@
                                     <input type="text" placeholder="BS Information Technology" readonly>
                                 </div>
                                 <div class="number">
-                                    <input type="number" min="1" max="10" placeholder="1st" required>
+                                    <input type="number" min="1" max="10" placeholder="1st" value="1" required>
                                 </div>
                                 <div class="number">
-                                    <input type="number" min="1" max="10" placeholder="2nd" required>
+                                    <input type="number" min="1" max="10" placeholder="2nd" value="1" required>
                                 </div>
                                 <div class="number">
-                                    <input type="number" min="1" max="10" placeholder="3rd" required>
+                                    <input type="number" min="1" max="10" placeholder="3rd" value="1" required>
                                 </div>
                                 <div class="number">
-                                    <input type="number" min="1" max="10" placeholder="4th" required>
+                                    <input type="number" min="1" max="10" placeholder="4th" value="1" required>
                                 </div>
                             </div>
     
@@ -109,16 +109,16 @@
                                     <input type="text" placeholder="BS Information System" readonly>
                                 </div>
                                 <div class="number">
-                                    <input type="number" min="1" max="10" placeholder="1st" required>
+                                    <input type="number" min="1" max="10" placeholder="1st" value="1" required>
                                 </div>
                                 <div class="number">
-                                    <input type="number" min="1" max="10" placeholder="2nd" required>
+                                    <input type="number" min="1" max="10" placeholder="2nd" value="1" required>
                                 </div>
                                 <div class="number">
-                                    <input type="number" min="1" max="10" placeholder="3rd" required>
+                                    <input type="number" min="1" max="10" placeholder="3rd" value="1" required>
                                 </div>
                                 <div class="number">
-                                    <input type="number" min="1" max="10" placeholder="4th" required>
+                                    <input type="number" min="1" max="10" placeholder="4th" value="1" required>
                                 </div>
                             </div>
                         </div>
@@ -173,11 +173,10 @@
                                                 <div class="input-prof-name">
                                                     <img src="{{ url_for('static', filename='assets/professor-icon.svg') }}">
                                                     <input type="text" placeholder="Professor Name" pattern="^[a-zA-Z\s]*$" required>
-                                                    <select name="preferred-time" required>
-                                                        <option value="" selected disabled>Time</option>
+                                                    <select name="preferred-time">
+                                                        <option value="" selected>Anytime</option>
                                                         <option value="AM">AM</option>
                                                         <option value="PM">PM</option>
-                                                        <option value="">Anytime</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -185,9 +184,8 @@
                                         <div class="grid-2">
                                             <label>Preferred Subject</label>
                                             <div class="subject-container">
-                                                <select name="subject" id="subject" required>
-                                                    <option value="" selected disabled>Select a subject</option>
-                                                    <option value="">Any Subject</option>
+                                                <select name="subject" id="subject">
+                                                    <option value="" selected>Any Subject</option>
                                                     <optgroup label="Computer Science">
                                                         <option value="CC103-M">Discrete Structures</option>
                                                         <option value="CS123-M">Linear Algebra</option>

@@ -21,6 +21,7 @@ def check_conflicts(data):
         conflicts.append((class2[0], class2[1], class2[2], class2[3], class2[4]))
   return conflicts
 
+
 def main():
   # Load data from JSON file
   with open('schedule.json', 'r') as f:
