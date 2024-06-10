@@ -14,7 +14,7 @@ body {
     display: block;
 }
 
-#roomSchedule, #programs, #professors, #modal {
+#roomSchedule, #professors, #programs, #modal {
     display: none;
 }
 
@@ -121,6 +121,8 @@ body {
 
 .prof-details .input-prof-name {
     position: relative;
+    display: flex;
+    flex-direction: row;
 }
 
 .prof-details .input-prof-name img {
@@ -129,6 +131,11 @@ body {
     top: 50%;
     transform: translateY(-50%);
     pointer-events: none;
+}
+
+.input-prof-name select {
+    width: 40% !important; 
+    margin-left: 5px;
 }
 
 
@@ -514,11 +521,17 @@ body {
         justify-content: center;
         padding-bottom: 30px;
     }
+    .temp-container {
+        width: 26.5%;
+    }
 }
 
 @media screen and (max-width: 600px){
     #professors .question {
         width: 80vw;
+    }
+    .temp-container {
+        width: 24.5%;
     }
 }
 
@@ -547,6 +560,9 @@ body {
         top: 50%;
         left: 62%;
     }   
+    .temp-container {
+        width: 28%;
+    }
 }
 
 @media (max-width: 425px){

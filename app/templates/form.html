@@ -44,13 +44,93 @@
                             </div>
                         </div>
                         <div class="card3">
-                            <button id="roomSchedNext" type="Submit" class="next-back-button next">Next</button>
+                            <button id="programNext" type="Submit" class="next-back-button next">Next</button>
                         </div>
                     </div>
                 </div>
             </div>  
         </form>
 
+        <form id="sectionForm">
+            <div id="programs">
+                <div class="content">
+                    <div class="question">
+                        <div class="card1">
+                            <p class="head">How many sections?</p>
+                            <p class="body-text">Input the number of sections per course and year.</p>
+                        </div>
+                        <div class="card2 section-input">
+                            <div class="grid wrapper">
+                                <div class="input-container">
+                                    <img src="{{url_for('static', filename='assets/calendar-icon.svg')}}">
+                                    <input type="text" placeholder="BS Computer Science" readonly>
+                                </div>
+    
+                                <div class="number">
+                                    <input type="number" min="1" max="10" placeholder="1st" required>
+                                </div>
+    
+                                <div class="number">
+                                    <input type="number" min="1" max="10" placeholder="2nd" required>
+                                </div>
+    
+                                <div class="number">
+                                    <input type="number" min="1" max="10" placeholder="3rd" required>
+                                </div>
+    
+                                <div class="number">
+                                    <input type="number" min="1" max="10" placeholder="4th" required>
+                                </div>
+    
+                            </div>
+    
+                            <div class="grid wrapper">
+                                <div class="input-container">
+                                    <img src="{{url_for('static', filename='assets/calendar-icon.svg')}}">
+                                    <input type="text" placeholder="BS Information Technology" readonly>
+                                </div>
+                                <div class="number">
+                                    <input type="number" min="1" max="10" placeholder="1st" required>
+                                </div>
+                                <div class="number">
+                                    <input type="number" min="1" max="10" placeholder="2nd" required>
+                                </div>
+                                <div class="number">
+                                    <input type="number" min="1" max="10" placeholder="3rd" required>
+                                </div>
+                                <div class="number">
+                                    <input type="number" min="1" max="10" placeholder="4th" required>
+                                </div>
+                            </div>
+    
+                            <div class="grid wrapper">
+                                <div class="input-container">
+                                    <img src="{{url_for('static', filename='assets/calendar-icon.svg')}}">
+                                    <input type="text" placeholder="BS Information System" readonly>
+                                </div>
+                                <div class="number">
+                                    <input type="number" min="1" max="10" placeholder="1st" required>
+                                </div>
+                                <div class="number">
+                                    <input type="number" min="1" max="10" placeholder="2nd" required>
+                                </div>
+                                <div class="number">
+                                    <input type="number" min="1" max="10" placeholder="3rd" required>
+                                </div>
+                                <div class="number">
+                                    <input type="number" min="1" max="10" placeholder="4th" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card3">
+                            <button id="schedNameBack" class="next-back-button back">Back</button>
+                            <button id="roomSchedNext" type="Submit" class="next-back-button next">Next</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        
         <form id="roomScheduleForm">
             <div id="roomSchedule">
                 <div class="content">
@@ -63,92 +143,12 @@
                             <form>
                                 <div class="input-container">
                                     <img src="{{url_for('static', filename='assets/calendar-icon.svg')}}">
-                                    <input type="text" placeholder="Number of rooms" pattern="\d*" title="Please enter numbers only" required>
+                                    <input id="roomInput" type="text" placeholder="Number of rooms" pattern="\d*" title="Please enter numbers only" required>
                                 </div>
                             </form>
                         </div>
                         <div class="card3">
-                            <button id="schedNameBack" type="Button" class="next-back-button back">Back</button>
-                            <button id="programNext" type="Submit" class="next-back-button next">Next</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </form>
-
-        <form id="sectionForm">
-            <div id="programs">
-                <div class="content">
-                    <div class="question">
-                        <div class="card1">
-                            <p class="head">How many sections?</p>
-                            <p class="body-text">Input the number of sections per course and year.</p>
-                        </div>
-                        <div class="card2">
-                            <div class="grid wrapper">
-                                <div class="input-container">
-                                    <img src="{{url_for('static', filename='assets/calendar-icon.svg')}}">
-                                    <input type="text" placeholder="BS Computer Science" readonly>
-                                </div>
-    
-                                <div class="number">
-                                    <input type="number" min="0" max="10" placeholder="1st" required>
-                                </div>
-    
-                                <div class="number">
-                                    <input type="number" min="0" max="10" placeholder="2nd" required>
-                                </div>
-    
-                                <div class="number">
-                                    <input type="number" min="0" max="10" placeholder="3rd" required>
-                                </div>
-    
-                                <div class="number">
-                                    <input type="number" min="0" max="10" placeholder="4th" required>
-                                </div>
-    
-                            </div>
-    
-                            <div class="grid wrapper">
-                                <div class="input-container">
-                                    <img src="{{url_for('static', filename='assets/calendar-icon.svg')}}">
-                                    <input type="text" placeholder="BS Information Technology" readonly>
-                                </div>
-                                <div class="number">
-                                    <input type="number" min="0" max="10" placeholder="1st" required>
-                                </div>
-                                <div class="number">
-                                    <input type="number" min="0" max="10" placeholder="2nd" required>
-                                </div>
-                                <div class="number">
-                                    <input type="number" min="0" max="10" placeholder="3rd" required>
-                                </div>
-                                <div class="number">
-                                    <input type="number" min="0" max="10" placeholder="4th" required>
-                                </div>
-                            </div>
-    
-                            <div class="grid wrapper">
-                                <div class="input-container">
-                                    <img src="{{url_for('static', filename='assets/calendar-icon.svg')}}">
-                                    <input type="text" placeholder="BS Information System" readonly>
-                                </div>
-                                <div class="number">
-                                    <input type="number" min="0" max="10" placeholder="1st" required>
-                                </div>
-                                <div class="number">
-                                    <input type="number" min="0" max="10" placeholder="2nd" required>
-                                </div>
-                                <div class="number">
-                                    <input type="number" min="0" max="10" placeholder="3rd" required>
-                                </div>
-                                <div class="number">
-                                    <input type="number" min="0" max="10" placeholder="4th" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card3">
-                            <button id="roomSchedBack" class="next-back-button back">Back</button>
+                            <button id="programBack" type="Button" class="next-back-button back">Back</button>
                             <button id="professorNext" type="Submit" class="next-back-button next">Next</button>
                         </div>
                     </div>
@@ -165,51 +165,136 @@
                             <p class="body-text">Input the professors together with their preferred subject to teach.</p>
                         </div>
                         <div class="card2">
-                            <form>
-                                <div class="input-container">
-                                    <div id="profInput">
-                                        <div id="addProfessorDetails1" class="prof-details">
-                                            <div class="grid-1">
-                                                <div class="prof-name">
-                                                    <div class="input-prof-name">
-                                                        <img src="{{ url_for('static', filename='assets/professor-icon.svg') }}">
-                                                        <input type="text" placeholder="Professor Name">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="grid-2">
-                                                <label>Preferred Subject</label>
-                                                <div class="subject-container">
-                                                    <select name="subject" id="subject">
-                                                            <option value="" selected disabled>Select a subject</option>
-                                                            <option value="artifical-intelligence">Artificial Intelligence</option>
-                                                            <option value="automata">Automata</option>
-                                                            <option value="decision-theory">Decision Theory</option>
-                                                            <option value="data-analytics">Data Analytics</option>
+                            <div class="input-container">
+                                <div id="profInput">
+                                    <div id="addProfessorDetails1" class="prof-details">
+                                        <div class="grid-1">
+                                            <div class="prof-name">
+                                                <div class="input-prof-name">
+                                                    <img src="{{ url_for('static', filename='assets/professor-icon.svg') }}">
+                                                    <input type="text" placeholder="Professor Name" pattern="^[a-zA-Z\s]*$" required>
+                                                    <select name="preferred-time" required>
+                                                        <option value="" selected disabled>Time</option>
+                                                        <option value="AM">AM</option>
+                                                        <option value="PM">PM</option>
                                                     </select>
-                                                    <div class="temp-container"></div>
-                                                </div>  
-                                                <div class="add-button-container add-subject">
-                                                    <img src="{{ url_for('static', filename='assets/add-icon.svg') }}"/>
-                                                    <button type="button" class="add-button">add</button>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="add-prof-button prof-add">
-                                            <div class="grid-1">
-                                                <div class="add-button-container add-prof">
-                                                    <img src="{{ url_for('static', filename='assets/add-icon.svg') }}"/>
-                                                    <button type="button" id="addProfessorButton" class="add-button">add professor</button>
-                                                </div>
+                                        <div class="grid-2">
+                                            <label>Preferred Subject</label>
+                                            <div class="subject-container">
+                                                <select name="subject" id="subject" required>
+                                                    <option value="" selected disabled>Select a subject</option>
+                                                    <optgroup label="Computer Science">
+                                                        <option value="CC103-M">Discrete Structures</option>
+                                                        <option value="CS123-M">Linear Algebra</option>
+                                                        <option value="CC201L-M">Information Management Lab</option>
+                                                        <option value="CC202-M">Information Management Lec</option>
+                                                        <option value="CC223-M">Applications Development and Emerging Technologies</option>
+                                                        <option value="CS201L-M">Operating System Lab</option>
+                                                        <option value="CS202-M">Operating System Lec</option>
+                                                        <option value="CS221L-M">Programming Language Lab</option>
+                                                        <option value="CS222-M">Programming Language Lec</option>
+                                                        <option value="CS243-M">Design and Analysis of Algorithms</option>
+                                                        <option value="CS261L-M">Networks and Communications Lab</option>
+                                                        <option value="CS262-M">Networks and Communications Lec</option>
+                                                        <option value="CC303-M">Methods of Research in Computing</option>
+                                                        <option value="CS303-M">Automata Theory and Formal Language</option>
+                                                        <option value="CS321L-M">Artificial Intelligence Lab</option>
+                                                        <option value="CS322-M">Artificial Intelligence Lec</option>
+                                                        <option value="CS343-M">Modeling and Simulation</option>
+                                                        <option value="CS361L-M">Software Engineering 2 Lab</option>
+                                                        <option value="CS362-M">Software Engineering 2 Lec</option>
+                                                        <option value="CSE3-M">CS Elective 3</option>
+                                                        <option value="CSE4-M">CS Elective 4</option>
+                                                        <option value="CS403">Supervised Industrial Training</option>
+                                                        <option value="CS423">Thesis Writing 2</option>
+                                                    </optgroup>
+                                                    <optgroup label="Information Technology">
+                                                        <option value="CC103-M">Discrete Structures</option>
+                                                        <option value="IT123-M">Human Computer Interaction</option>
+                                                        <option value="MATHSTAT03-M">Probability and Statistics</option>
+                                                        <option value="CC201L-M">Information Management Lab</option>
+                                                        <option value="CC202-M">Information Management Lec</option>
+                                                        <option value="CC223-M">Applications Development and Emerging Technologies</option>
+                                                        <option value="IT201L-M">Programming Language Lab</option>
+                                                        <option value="IT202-M">Programming Language Lec</option>
+                                                        <option value="IT223-M">Quantitative Methods</option>
+                                                        <option value="IT241L-M">Computer Networking 1 Lab</option>
+                                                        <option value="IT242-M">Computer Networking 1 Lec</option>
+                                                        <option value="IT261L-M">Multimedia Authoring & Production Lab</option>
+                                                        <option value="IT262-M">Multimedia Authoring & Production Lec</option>
+                                                        <option value="ITE1-M">IT Elective 1</option>
+                                                        <option value="CC303-M">Methods of Research in Computing</option>
+                                                        <option value="GEE11D-M">Living in the IT Era</option>
+                                                        <option value="IT303-M">Systems Integration and Architecture 1</option>
+                                                        <option value="IT323">Business Intelligence</option>
+                                                        <option value="IT343-M">System Administration and Maintenance</option>
+                                                        <option value="IT363-M">Information Assurance and Security 2</option>
+                                                        <option value="ITE4-M">IT Elective 4</option>
+                                                        <option value="IT406-M">Supervised Industrial Training</option>
+                                                        <option value="IT423-M">IT Capstone & Research 2</option>
+                                                    </optgroup>
+                                                    <optgroup label="Information Security">
+                                                        <option value="CC103-M">Discrete Structures</option>
+                                                        <option value="IS123-M">Fundamentals of Information Systems</option>
+                                                        <option value="MATHSTAT03-M">Probability and Statistics</option>
+                                                        <option value="CC201L-M">Information Management Lab</option>
+                                                        <option value="CC202-M">Information Management Lec</option>
+                                                        <option value="CC223-M">Applications Development and Emerging Technologies</option>
+                                                        <option value="IS203-M">Accounting and Financial Management</option>
+                                                        <option value="IS223-M">Business Process Management</option>
+                                                        <option value="IS243-M">IT Infrastructure and Network Technologies</option>
+                                                        <option value="IS263-M">Business Intelligence</option>
+                                                        <option value="ISE1-M">IS Elective 1</option>
+                                                        <option value="CC303-M">Methods of Research in Computing</option>
+                                                        <option value="IS303-M">Information Assurance and Security 2</option>
+                                                        <option value="IS323-M">Enterprise Architecture</option>
+                                                        <option value="IS343-M">IS Strategy, Management and Acquisition</option>
+                                                        <option value="IS363-M">IS Project Management 2</option>
+                                                        <option value="IS383-M">Evaluation and Business Performance</option>
+                                                        <option value="ISE4-M">IS Elective 4</option>
+                                                        <option value="IS406-M">Supervised Industrial Training</option>
+                                                        <option value="IS423-M">IS Capstone Project 2</option>
+                                                    </optgroup>
+                                                    <optgroup label="Computer Programming">
+                                                        <option value="CC141L-M">Computer Programming 2 Lab</option>
+                                                        <option value="CC142-M">Computer Programming 2 Lec</option>
+                                                    </optgroup>
+                                                    <optgroup label="General Education Courses">
+                                                        <option value="GEC2-M">Readings in Philippine History</option>
+                                                        <option value="GEC3-M">The Contemporary World</option>
+                                                        <option value="GEC5-M">Purposive Communication</option>
+                                                        <option value="MATHA35-M">Differential and Integral Calculus</option>
+                                                        <option value="NSTP2-M">National Service Training Program 2</option>
+                                                        <option value="PE2-M">Rhythmic Activities</option>
+                                                        <option value="PE3-M">Individual and Dual Sports</option>
+                                                        <option value="PE4-M">Team Sports</option>
+                                                    </optgroup>
+                                                </select>
+                                                <div class="temp-container"></div>
+                                            </div>  
+                                            <div class="add-button-container add-subject">
+                                                <img src="{{ url_for('static', filename='assets/add-icon.svg') }}"/>
+                                                <button type="button" class="add-button">add</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="add-prof-button prof-add">
+                                        <div class="grid-1">
+                                            <div class="add-button-container add-prof">
+                                                <img src="{{ url_for('static', filename='assets/add-icon.svg') }}"/>
+                                                <button type="button" id="addProfessorButton" class="add-button">add professor</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </form>
+                            </div>
                         </div>
                         <div class="card3">
-                            <button id="programBack" class="next-back-button back">Back</button>
-                            <button id="submitInfo" class="next-back-button next">Submit</button>
+                            <button id="roomSchedBack" class="next-back-button back">Back</button>
+                            <button id="submitInfo" type="Submit" class="next-back-button next">Submit</button>
                         </div>
                     </div>
                 </div>
