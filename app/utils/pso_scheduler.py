@@ -698,3 +698,4 @@ def run_pso(sched_name, sections, rooms, professors):
 
     # Run main pso function
     main()
+    return True

@@ -23,8 +23,10 @@ def receive_data():
     professors = {name: {'preferred_time': info['preferred_time'], 'preferred_subjects': info['preferred_subjects']} for name, info in professors.items()}
     
     # PSO Algorithm for scheduling
-    run_pso(sched_name, sections, rooms, professors)
-    
+    #run_pso(sched_name, sections, rooms, professors)
+    if (run_pso(sched_name, sections, rooms, professors)):
+        with open('app/static/run.txt', 'a') as f:
+            f.write('1')
     # # Check if json is exist
     # while not os.path.exists('app/static/schedule.json'):
     #     sleep(1)
