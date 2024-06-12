@@ -639,4 +639,3 @@ roomInput.addEventListener('input', function() {
     }
     this.reportValidity();
 });
-

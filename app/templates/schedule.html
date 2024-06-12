@@ -14,7 +14,7 @@
                     <img src="{{url_for('static', filename='assets/logo.png')}}">
                     <p class="logo-text">Swarmy</p>
                 </div>
-                <div class="generate-new-sched">
+                <div id="createSchedule" class="generate-new-sched">
                     <p>Create New Schedule</p>
                 </div>
             </div>
@@ -70,5 +70,11 @@
                 </div>
             {% endif %}
         </main>
+        <script>
+            // new sched button
+            document.getElementById('createSchedule').addEventListener('click', function() {
+                window.location.href = '/form';
+            })
+        </script>
     </body>
 </html>
