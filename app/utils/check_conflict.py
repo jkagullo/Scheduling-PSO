@@ -34,7 +34,7 @@ def main():
   #print(data[1])
   check_conflicts(data)
   if check_conflicts(data) == []:
-    print("No conflicts found.")
+    return "No conflicts found"
 
 
 if __name__ == '__main__':

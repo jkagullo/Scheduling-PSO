@@ -405,6 +405,9 @@ document.getElementById('schedNameForm').addEventListener('submit', function(e) 
 document.getElementById('sectionForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
+    // Store the total number of sections in local storage
+    getTotalSections();
+    
     function addSections(input, index, program) {
         let sectionLetter = 'A';
         if (program === 'CS') {
@@ -537,37 +540,6 @@ document.getElementById('professorForm').addEventListener('submit', function(e) 
         data: JSON.stringify({ sections, roomSchedule, professors, schedName }),
         success: function(response) {
             window.location.href = '/schedule';
-            // window.location.href = '/schedule';
-            // var numProf = document.getElementsByClassName('prof-details').length;
-            // let data = null;
-            // let numOfUpdate = 0;
-
-            // async function fetchData() {
-            //     try {
-            //         const response = await fetch('/static/schedule.json');
-            //         const jsonData = await response.json();
-            //         return JSON.stringify(jsonData);
-            //     } catch (error) {
-            //         console.error('Error fetching data:', error);
-            //         return null;
-            //     }
-            // }
-            
-            // setInterval(async () => {
-            //     var newData = await fetchData();
-
-            //     if (numOfUpdate >= numProf) {
-            //         window.location.href = '/schedule';
-            //     }
-
-            //     if (data !== null && data !== newData) {
-            //         // If the schedule.json is updated, reset the timer
-            //         numOfUpdate++;
-            //     } else if (data === null) {
-            //         // If this is the first fetch, just set the data
-            //         data = newData;
-            //     } 
-            // }, 3000);
         },
         error: function(error) {
             document.querySelector('header').style.display = 'flex';
@@ -619,6 +591,18 @@ nextButton.forEach(function(button) {
 });
 
 
+// Get total number of sections
+function getTotalSections() {
+    var inputs = document.querySelectorAll('.num-of-section');
+
+    var total = Array.from(inputs).reduce(function(sum, input) {
+        return sum + parseInt(input.value);
+    }, 0);
+
+    localStorage.setItem('totalSections', total);
+}
+
+
 // Number of rooms input validation based on number of sections
 let roomInput = document.getElementById('roomInput');
 
@@ -632,3 +616,5 @@ roomInput.addEventListener('input', function() {
     }
     this.reportValidity();
 });
+
+

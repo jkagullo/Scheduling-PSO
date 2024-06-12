@@ -69,12 +69,35 @@
                     </table>
                 </div>
             {% endif %}
+            <div id="profModal">
+                <div id="insufficientProfModal" class="modal-conflict">
+                    <p class="fw-700">Insufficient Professors</p>
+                    <p class="subtitle">Total Sections: <span id="totalSections"></span></p>
+                    <p class="subtitle">Scheduled Sections Only: <span id="scheduledSections"></span></p>
+                    <button id="cancel-prof-modal-button">OK</button>
+                </div>
+            </div>
+            <div id="roomModal">
+                <div id="insufficientRoomModal" class="modal-conflict">
+                    <p class="fw-700">Insufficient Room</p>
+                    <p class="fw-600">Conflict schedule found in:</p>
+                    <table id="conflictTable">
+                        <thead>
+                            <tr>
+                                <th>Section</th>
+                                <th>Subject</th>
+                                <th>Professor</th>
+                                <th>Time</th>
+                                <th>Room</th>
+                            <tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <button id="cancel-room-modal-button">OK</button>
+                </div>
+            </div>
         </main>
-        <script>
-            // new sched button
-            document.getElementById('createSchedule').addEventListener('click', function() {
-                window.location.href = '/form';
-            })
-        </script>
+        <script src="{{ url_for('static', filename='js/schedule.js') }} "></script>
     </body>
 </html>
