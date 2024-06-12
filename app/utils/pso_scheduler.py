@@ -676,10 +676,6 @@ def run_pso(sched_name, sections, rooms, professors):
 
         json_schedule = {section: [list(entry) for entry in entries] for section, entries in grouped_schedule.items()}
 
-        # Save the schedule to a JSON file
-        # with open('temp.txt', 'a') as f:
-        #     f.write("1 ")
-
         with open('app/static/schedule.json', 'w') as f:
             json.dump(json_schedule, f, indent=4)
 
@@ -698,4 +694,3 @@ def run_pso(sched_name, sections, rooms, professors):
 
     # Run main pso function
     main()
-    return True

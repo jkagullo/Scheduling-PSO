@@ -12,6 +12,7 @@ def form_page():
 @form.route('/receive_data', methods=['POST'])
 def receive_data():
     data = request.get_json()
+    counter = 0
 
     # Parse the data
     sched_name = data['schedName']
@@ -21,16 +22,9 @@ def receive_data():
 
     # Change positions
     professors = {name: {'preferred_time': info['preferred_time'], 'preferred_subjects': info['preferred_subjects']} for name, info in professors.items()}
-    
-    # PSO Algorithm for scheduling
-    #run_pso(sched_name, sections, rooms, professors)
-    if (run_pso(sched_name, sections, rooms, professors)):
-        with open('app/static/run.txt', 'a') as f:
-            f.write('1')
-    # # Check if json is exist
-    # while not os.path.exists('app/static/schedule.json'):
-    #     sleep(1)
-        
+
+    run_pso(sched_name, sections, rooms, professors)
+
     return 'Success!'
 
 

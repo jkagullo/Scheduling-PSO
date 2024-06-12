@@ -528,53 +528,55 @@ document.getElementById('professorForm').addEventListener('submit', function(e) 
         document.querySelector('header').style.display = 'none';
         document.getElementById('professors').style.display = 'none';
         document.getElementById('modal').style.display = 'flex';
-
-        $.ajax({
-            url: '/receive_data',
-            method: 'POST',
-            contentType: 'application/json',
-            data: JSON.stringify({ sections, roomSchedule, professors, schedName }),
-            success: function(response) {
-                var numProf = document.getElementsByClassName('prof-details').length;
-                let data = null;
-                let numOfUpdate = 0;
-
-                async function fetchData() {
-                    try {
-                        const response = await fetch('/static/schedule.json');
-                        const jsonData = await response.json();
-                        return JSON.stringify(jsonData);
-                    } catch (error) {
-                        console.error('Error fetching data:', error);
-                        return null;
-                    }
-                }
-                
-                setInterval(async () => {
-                    var newData = await fetchData();
-
-                    if (numOfUpdate >= numProf) {
-                        window.location.href = '/schedule';
-                    }
-
-                    if (data !== null && data !== newData) {
-                        // If the schedule.json is updated, reset the timer
-                        numOfUpdate++;
-                    } else if (data === null) {
-                        // If this is the first fetch, just set the data
-                        data = newData;
-                    } 
-                }, 3000);
-            },
-            error: function(error) {
-                document.querySelector('header').style.display = 'flex';
-                document.getElementById('modal').style.display = 'none';
-                document.getElementById('professors').style.display = 'block';
-                document.getElementById('progressBar').style.width = '100%';
-                console.error('Error:', error);
-            }
-        })
     });
+
+    $.ajax({
+        url: '/receive_data',
+        method: 'POST',
+        contentType: 'application/json',
+        data: JSON.stringify({ sections, roomSchedule, professors, schedName }),
+        success: function(response) {
+            window.location.href = '/schedule';
+            // window.location.href = '/schedule';
+            // var numProf = document.getElementsByClassName('prof-details').length;
+            // let data = null;
+            // let numOfUpdate = 0;
+
+            // async function fetchData() {
+            //     try {
+            //         const response = await fetch('/static/schedule.json');
+            //         const jsonData = await response.json();
+            //         return JSON.stringify(jsonData);
+            //     } catch (error) {
+            //         console.error('Error fetching data:', error);
+            //         return null;
+            //     }
+            // }
+            
+            // setInterval(async () => {
+            //     var newData = await fetchData();
+
+            //     if (numOfUpdate >= numProf) {
+            //         window.location.href = '/schedule';
+            //     }
+
+            //     if (data !== null && data !== newData) {
+            //         // If the schedule.json is updated, reset the timer
+            //         numOfUpdate++;
+            //     } else if (data === null) {
+            //         // If this is the first fetch, just set the data
+            //         data = newData;
+            //     } 
+            // }, 3000);
+        },
+        error: function(error) {
+            document.querySelector('header').style.display = 'flex';
+            document.getElementById('modal').style.display = 'none';
+            document.getElementById('professors').style.display = 'block';
+            document.getElementById('progressBar').style.width = '100%';
+            console.error('Error:', error);
+        }
+    })
 });
 
 
