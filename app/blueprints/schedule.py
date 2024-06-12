@@ -391,9 +391,6 @@ def schedule_page():
                             # multiply units by 3 
                             unit_multiplier = 3
                         data[section][i][3] = f"{sched_time_dict['day'][:3] + ' ' + str(sched_time_dict['start']) + ':00 - ' + str(sched_time_dict['start'] + subjects[sub_code]['units'] * unit_multiplier) + ':00'}"
-
-            # Remove the json file
-            os.remove('app/static/schedule.json')
         else:
             print("Error: The file 'schedule.json' does not exist.")
             data = None
