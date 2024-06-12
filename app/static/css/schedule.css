@@ -8,14 +8,17 @@
 body {
     height: 100vh;
     background-color: #E1E1E1;
+    padding: 0;
 }
 
 header {
+    display: flex;
+    flex-direction: column;
     padding-top: 40px;
     margin-bottom: 50px;
 }
 
-.logo {
+.logo div {
     display: flex;
     flex-direction: row;
     align-items: end;
@@ -92,6 +95,22 @@ td {
     opacity: 0.7;
 }
 
+.generate-new-sched {
+    float: right;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 200px;
+    background-color: #5E5E9A;
+    color: #E1E1E1;
+    padding: 10px 20px;
+    border-radius: 13px;
+}
+
+.generate-new-sched:hover {
+    filter: brightness(90%);
+    cursor: pointer;
+}
+
 /* Usable class */
 .blue-text {
     color: #5E5E9A;
@@ -107,4 +126,25 @@ td {
 
 .fw-600 {
     font-weight: 600;
+}
+
+@media (max-width:1150px)  {
+    .schedule-container {
+        width: 80%;
+    }
+
+    .generate-new-sched {
+        margin-right: 70px;
+    }
+}
+
+@media (max-width: 600px) {
+    .generate-new-sched {
+        font-size: 14px;
+        text-align: center;
+        display: flex;
+        float: none;
+        width: 45%;
+        margin-right: 40px;
+    }
 }

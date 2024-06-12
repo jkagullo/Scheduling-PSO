@@ -680,7 +680,7 @@ def run_pso(sched_name, sections, rooms, professors):
         with open('temp.txt', 'a') as f:
             f.write("1 ")
 
-        with open('schedule.json', 'w') as f:
+        with open('app/static/schedule.json', 'w') as f:
             json.dump(json_schedule, f, indent=4)
 
 

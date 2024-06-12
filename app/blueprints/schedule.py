@@ -393,11 +393,11 @@ def schedule_page():
                             unit_multiplier = 3
                         data[section][i][3] = f"{sched_time_dict['day'][:3] + ' ' + str(sched_time_dict['start']) + ':00 - ' + str(sched_time_dict['start'] + subjects[sub_code]['units'] * unit_multiplier) + ':00'}"
 
-            # Log the final data for verification
-            with open('orig_data.json', 'w') as f:
-                f.write(json.dumps(data, indent=4))
+            # # Log the final data for verification
+            # with open('orig_data.json', 'w') as f:
+            #     f.write(json.dumps(data, indent=4))
 
-            print("Data processed successfully:\n", json.dumps(data, indent=4))
+            # print("Data processed successfully:\n", json.dumps(data, indent=4))
 
         else:
             print("Error: The file 'schedule.json' does not exist.")

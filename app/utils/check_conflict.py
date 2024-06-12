@@ -24,7 +24,7 @@ def check_conflicts(data):
 
 def main():
   # Load data from JSON file
-  with open('schedule.json', 'r') as f:
+  with open('app/static/schedule.json', 'r') as f:
       json_data = json.load(f)
   data = []
 
