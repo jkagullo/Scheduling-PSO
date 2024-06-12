@@ -535,8 +535,9 @@ document.getElementById('professorForm').addEventListener('submit', function(e) 
             contentType: 'application/json',
             data: JSON.stringify({ sections, roomSchedule, professors, schedName }),
             success: function(response) {
+                var numProf = document.getElementsByClassName('prof-details').length;
                 let data = null;
-                let intervalId = null;
+                let numOfUpdate = 0;
 
                 async function fetchData() {
                     try {
@@ -549,31 +550,21 @@ document.getElementById('professorForm').addEventListener('submit', function(e) 
                     }
                 }
                 
-                function startInterval() {
-                    intervalId = setInterval(async () => {
-                        var newData = await fetchData();
+                setInterval(async () => {
+                    var newData = await fetchData();
 
-                        if (newData === null) {
-                            console.log("Failed to fetch schedule");
-                            clearInterval(intervalId);
-                            startInterval();
-                        } else if (data !== null && data !== newData) {
-                            // If the schedule.json is updated, reset the timer
-                            console.log("Schedule is updated");
-                            clearInterval(intervalId);
-                            startInterval();
-                        } else if (data === null) {
-                            // If this is the first fetch, just set the data
-                            data = newData;
-                            console.log("First fetch of schedule");
-                        } else {
-                            // If the schedule.json is not updated, break the loop and redirect
-                            clearInterval(intervalId);
-                            window.location.href = '/schedule';
-                        }
-                    }, 10000);
-                }
-                startInterval();
+                    if (numOfUpdate >= numProf) {
+                        window.location.href = '/schedule';
+                    }
+
+                    if (data !== null && data !== newData) {
+                        // If the schedule.json is updated, reset the timer
+                        numOfUpdate++;
+                    } else if (data === null) {
+                        // If this is the first fetch, just set the data
+                        data = newData;
+                    } 
+                }, 3000);
             },
             error: function(error) {
                 document.querySelector('header').style.display = 'flex';

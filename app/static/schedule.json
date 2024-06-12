@@ -1,0 +1,347 @@
+{
+    "Section 1A-CS": [
+        [
+            "Section 1A-CS",
+            "NSTP2-M",
+            "prof b",
+            "D3_H8",
+            "Room 000"
+        ],
+        [
+            "Section 1A-CS",
+            "CC142-M",
+            "prof a",
+            "D3_H12",
+            "Room 004"
+        ],
+        [
+            "Section 1A-CS",
+            "MATHA35-M",
+            "prof b",
+            "D1_H7",
+            "Room 001"
+        ],
+        [
+            "Section 1A-CS",
+            "PE2-M",
+            "prof a",
+            "D4_H12",
+            "Room 000"
+        ],
+        [
+            "Section 1A-CS",
+            "CC103-M",
+            "prof b",
+            "D4_H8",
+            "Room 003"
+        ],
+        [
+            "Section 1A-CS",
+            "CC141L-M",
+            "prof a",
+            "D5_H9",
+            "Room 004"
+        ],
+        [
+            "Section 1A-CS",
+            "CS123-M",
+            "prof b",
+            "D2_H8",
+            "Room 002"
+        ],
+        [
+            "Section 1A-CS",
+            "GEC2-M",
+            "prof b",
+            "D5_H6",
+            "Room 003"
+        ],
+        [
+            "Section 1A-CS",
+            "GEC3-M",
+            "prof a",
+            "D2_H11",
+            "Room 000"
+        ],
+        [
+            "Section 1A-CS",
+            "GEC5-M",
+            "prof b",
+            "D4_H2",
+            "Room 004"
+        ]
+    ],
+    "Section 2A-CS": [
+        [
+            "Section 2A-CS",
+            "CC223-M",
+            "prof a",
+            "D3_H9",
+            "Room 002"
+        ],
+        [
+            "Section 2A-CS",
+            "CS222--M",
+            "prof b",
+            "D3_H6",
+            "Room 004"
+        ],
+        [
+            "Section 2A-CS",
+            "CS201L-M",
+            "prof b",
+            "D5_H11",
+            "Room 004"
+        ],
+        [
+            "Section 2A-CS",
+            "CC201L-M",
+            "prof a",
+            "D4_H9",
+            "Room 001"
+        ],
+        [
+            "Section 2A-CS",
+            "CC202-M",
+            "prof a",
+            "D2_H6",
+            "Room 003"
+        ],
+        [
+            "Section 2A-CS",
+            "CS243-M",
+            "prof b",
+            "D2_H11",
+            "Room 002"
+        ],
+        [
+            "Section 2A-CS",
+            "CS202--M",
+            "prof a",
+            "D1_H11",
+            "Room 002"
+        ],
+        [
+            "Section 2A-CS",
+            "CS262-M",
+            "prof b",
+            "D4_H6",
+            "Room 005"
+        ],
+        [
+            "Section 2A-CS",
+            "CS261L-M",
+            "prof a",
+            "D1_H8",
+            "Room 003"
+        ],
+        [
+            "Section 2A-CS",
+            "CS221L--M",
+            "prof a",
+            "D2_H8",
+            "Room 001"
+        ],
+        [
+            "Section 2A-CS",
+            "PE3-M",
+            "prof a",
+            "D5_H6",
+            "Room 001"
+        ]
+    ],
+    "Section 3A-CS": [
+        [
+            "Section 3A-CS",
+            "CS303-M",
+            "prof b",
+            "D4_H11",
+            "Room 005"
+        ],
+        [
+            "Section 3A-CS",
+            "CS362-M",
+            "prof a",
+            "D3_H7",
+            "Room 004"
+        ],
+        [
+            "Section 3A-CS",
+            "CS361L-M",
+            "prof b",
+            "D3_H11",
+            "Room 000"
+        ],
+        [
+            "Section 3A-CS",
+            "CSE3-M",
+            "prof a",
+            "D4_H6",
+            "Room 003"
+        ],
+        [
+            "Section 3A-CS",
+            "CS321L-M",
+            "prof a",
+            "D2_H3",
+            "Room 004"
+        ],
+        [
+            "Section 3A-CS",
+            "CS322-M",
+            "prof b",
+            "D1_H12",
+            "Room 004"
+        ],
+        [
+            "Section 3A-CS",
+            "CC303-M",
+            "prof b",
+            "D3_H1",
+            "Room 003"
+        ],
+        [
+            "Section 3A-CS",
+            "CSE4-M",
+            "prof a",
+            "D5_H1",
+            "Room 005"
+        ],
+        [
+            "Section 3A-CS",
+            "CS343-M",
+            "prof b",
+            "D1_H1",
+            "Room 002"
+        ]
+    ],
+    "Section 4A-CS": [
+        [
+            "Section 4A-CS",
+            "CS423",
+            "prof b",
+            "D5_H3",
+            "Room 005"
+        ]
+    ],
+    "Section 1A-IT": [
+        [
+            "Section 1A-IT",
+            "CC141L-M",
+            "prof b",
+            "D2_H2",
+            "Room 003"
+        ],
+        [
+            "Section 1A-IT",
+            "NSTP2--M",
+            "prof a",
+            "D1_H1",
+            "Room 003"
+        ],
+        [
+            "Section 1A-IT",
+            "MATHSTAT03-M",
+            "prof a",
+            "D4_H2",
+            "Room 001"
+        ],
+        [
+            "Section 1A-IT",
+            "PE2-M",
+            "prof a",
+            "D5_H12",
+            "Room 001"
+        ],
+        [
+            "Section 1A-IT",
+            "CC142-M",
+            "prof b",
+            "D2_H6",
+            "Room 002"
+        ],
+        [
+            "Section 1A-IT",
+            "GEC3-M",
+            "prof a",
+            "D3_H3",
+            "Room 001"
+        ]
+    ],
+    "Section 2A-IT": [
+        [
+            "Section 2A-IT",
+            "PE4-M",
+            "prof b",
+            "D5_H9",
+            "Room 003"
+        ],
+        [
+            "Section 2A-IT",
+            "IT261L-M",
+            "prof a",
+            "D1_H7",
+            "Room 003"
+        ],
+        [
+            "Section 2A-IT",
+            "CC202-M",
+            "prof a",
+            "D1_H4",
+            "Room 003"
+        ],
+        [
+            "Section 2A-IT",
+            "IT202--M",
+            "prof a",
+            "D2_H1",
+            "Room 001"
+        ],
+        [
+            "Section 2A-IT",
+            "IT242-M",
+            "prof b",
+            "D3_4",
+            "Room 002"
+        ],
+        [
+            "Section 2A-IT",
+            "IT201L--M",
+            "prof a",
+            "D1_H13",
+            "Room 003"
+        ],
+        [
+            "Section 2A-IT",
+            "IT262-M",
+            "prof a",
+            "D3_H1",
+            "Room 005"
+        ]
+    ],
+    "Section 1A-IS": [
+        [
+            "Section 1A-IS",
+            "PE2-M",
+            "prof a",
+            "D5_H4",
+            "Room 004"
+        ],
+        [
+            "Section 1A-IS",
+            "CC142-M",
+            "prof b",
+            "D5_H1",
+            "Room 000"
+        ]
+    ],
+    "Section 2A-IS": [
+        [
+            "Section 2A-IS",
+            "PE4-M",
+            "prof b",
+            "D1_H4",
+            "Room 001"
+        ]
+    ]
+}

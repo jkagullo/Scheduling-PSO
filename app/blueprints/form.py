@@ -25,9 +25,9 @@ def receive_data():
     # PSO Algorithm for scheduling
     run_pso(sched_name, sections, rooms, professors)
     
-    # Check if json is exist
-    while not os.path.exists('app/static/schedule.json'):
-        sleep(1)
+    # # Check if json is exist
+    # while not os.path.exists('app/static/schedule.json'):
+    #     sleep(1)
         
     return 'Success!'
 
