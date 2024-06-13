@@ -222,7 +222,7 @@ function handleButtonClick() {
                     <div class="prof-name">
                         <div class="input-prof-name">
                             <img src="${profIconUrl}">
-                            <input type="text" placeholder="Professor Name" pattern="^[a-zA-Z\\s]*$" required>
+                            <input type="text" placeholder="Professor Name" pattern="^[a-zA-Z\\s]*$" autofocus required>
                             <select name="preferred-time">
                                 <option value="" selected>Anytime</option>
                                 <option value="AM">AM</option>
