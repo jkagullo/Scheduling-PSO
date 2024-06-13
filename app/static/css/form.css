@@ -270,6 +270,45 @@ body {
     margin-bottom: 35px;
 }
 
+#schedName .card1 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+#schedName .card1 div:first-child {
+    width: 80%;
+}
+
+#schedName .text-sem {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#schedName .card2 {
+    display: flex;
+    flex-direction: row;
+}
+
+#schedName .semester {
+    border-radius: 10px;
+    border: 1px solid #5E5E9A;
+    box-shadow: 0 0 6px 4px rgba(94, 94, 154, 0.2);
+    margin-left: 5px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #2E2E2E;
+    padding: 0 10px;
+}
+
+#schedName .semester:focus {
+    outline: 1px solid #5E5E9A;
+}
+
+#schedName .question {
+    width: 50%;
+}
 
 .card3 {
     width: 100%;

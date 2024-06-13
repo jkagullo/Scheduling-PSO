@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, request
 from app.utils.pso_scheduler import run_pso
+from app.utils.pso_scheduler2 import run_pso2
 from time import sleep
 import os
 
@@ -19,12 +20,17 @@ def receive_data():
     sections = data['sections']
     rooms = data['roomSchedule']
     professors = data['professors']
+    semester = data['semester']
 
     # Change positions
     professors = {name: {'preferred_time': info['preferred_time'], 'preferred_subjects': info['preferred_subjects']} for name, info in professors.items()}
 
-    run_pso(sched_name, sections, rooms, professors)
-
+    if semester == '1st':
+        run_pso(sched_name, sections, rooms, professors)
+    elif semester == '2nd':
+        run_pso2(sched_name, sections, rooms, professors)
+    else:
+        print("Invalid semester: ", semester)
     return 'Success!'
 
 

@@ -34,14 +34,23 @@
                 <div class="content">
                     <div class="question">
                         <div class="card1">
-                            <p class="head">What is the schedule name?</p>
-                            <p class="body-text">Enter your desired schedule name, you can always change it later.</p>
+                            <div>
+                                <p class="head">What is the schedule name?</p>
+                                <p class="body-text">Enter your desired schedule name, you can always change it later.</p>
+                            </div>
+                            <div>
+                                <p class="text-sem">Semester</p>
+                            </div>
                         </div>
                         <div class="card2">
                             <div class="input-container">
                                 <img src="{{url_for('static', filename='assets/calendar-icon.svg')}}">
                                 <input id="schedNameInput" type="text" placeholder="Enter schedule name" required>
                             </div>
+                            <select id="semesterSelect" class="semester" required>
+                                <option value="1st" selected>1st Semester</option>
+                                <option value="2nd">2nd Semester</option>
+                            </select>
                         </div>
                         <div class="card3">
                             <button id="programNext" type="Submit" class="next-back-button next">Next</button>

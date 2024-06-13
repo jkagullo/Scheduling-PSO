@@ -5,6 +5,7 @@
 
 
 let schedName = '';
+let semester = '';
 let roomSchedule = [];
 let sections_cs = {
     1: [],
@@ -400,6 +401,7 @@ function incrementId(parentElement) {
 document.getElementById('schedNameForm').addEventListener('submit', function(e) {
     e.preventDefault();
     schedName = document.getElementById('schedNameInput').value;
+    semester = document.getElementById('semesterSelect').value;
 });
 
 document.getElementById('sectionForm').addEventListener('submit', function(e) {
@@ -506,6 +508,8 @@ document.getElementById('roomScheduleForm').addEventListener('submit', function(
 document.getElementById('professorForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
+    // IF CONDITION FOR 1ST AND 2ND SEMESTER SUBJECTS (SOON TO BE IMPLEMENTED)
+
     let professorDetails = document.querySelectorAll('.prof-details');
     professors = {};
 
@@ -537,7 +541,7 @@ document.getElementById('professorForm').addEventListener('submit', function(e) 
         url: '/receive_data',
         method: 'POST',
         contentType: 'application/json',
-        data: JSON.stringify({ sections, roomSchedule, professors, schedName }),
+        data: JSON.stringify({ sections, roomSchedule, professors, schedName, semester }),
         success: function(response) {
             window.location.href = '/schedule';
         },
